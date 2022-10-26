@@ -1,22 +1,46 @@
-const { createApp } = Vue;
+const { createApp } = Vue
 
 createApp({
-    data(){
+    data() {
         return {
-            URI: 'https://apipetshop.herokuapp.com/api/articulos',
+            articulos: [],
+            backUpArticulos: [],
+            urlApi: "https://apipetshop.herokuapp.com/api/articulos",
+            categorias: [],
+            articulosFarmacia: [],
+            articulosJugueteria: [],
+
         }
-
     },
-    created(){
-
+    created() {
+        this.traerDatos()
     },
-    mounted(){
+    mounted() {
 
     },
     methods: {
+        traerDatos() {
+            fetch(this.urlApi).then(response => response.json())
+                .then(data => {
+                    this.articulos = data.response
+                    if (document.title == "PLEM Farmacia") {
+                        this.articulos = data.response.filter((articulo) => articulo.tipo == "Medicamento")
+                    } else if (document.title == "PLEM Jugueteria") {
+                        this.articulos = data.response.filter((articulo) => articulo.tipo == "Juguete")
+                    } else if (document.title == "PLEM Detalle") {
+                        let id = new URLSearchParams(location.search).get("_id");
+                        this.articulos = data.response.find((articulo) => articulo._id == id);
+                        console.log(articulos)
+                    }
 
+
+                })
+        }
+        
     },
+
     computed: {
 
-    }
-}).mount('#app');
+    },
+
+}).mount('#app')
