@@ -35,6 +35,14 @@ createApp({
 
 
                 })
+        },
+        sendForm() {
+            Swal.fire({
+                title: 'Formulario enviado!',
+                text: 'Gracias por su tiempo.',
+                icon: 'success',
+                confirmButtonText: 'Continue'
+            })
         }
         
     },
