@@ -1,5 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+.body-special {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+/* ----------------------- NAV ----------------------- */
+
+nav {
+    /* height: 5vh; */
+    /* background-color: #45526e; */
+    background-color: #8F584D;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    color: #FFF5ED;
+  }
+  
+  .nav-link:hover {
+    color: white;
+  }
+  
+  #active {
+    color: white;
+  }
+  
+  #active:hover {
+    color: #FFF5ED;
+  }
+  
+  ul li a:hover {
+    visibility: visible;
+    transform: scaleX(1);
+    background-color: #FFF5ED;
+    color: #8F584D !important;
+  }
+
+/* ----------------------- FOOTER ----------------------- */
+
+  footer{
+    background-color: #8F584D !important;
+    font-size: 1.5rem;
+}
+
+/* #footer-special {
+    margin-top: auto;
+    width: 100%;
+  } */
+
+.svg-inline--fa {
+    vertical-align: -0.2em;
+  }
+  
+  .rounded-social-buttons {
+    text-align: center;
+  }
+  
+  .rounded-social-buttons .social-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .rounded-social-buttons .social-button:hover,
+  .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  
+  .rounded-social-buttons .fa-twitter,
+  .fa-facebook-f,
+  .fa-linkedin,
+  .fa-youtube,
+  .fa-instagram {
+    font-size: 25px;
+  }
+  
+  .rounded-social-buttons .social-button.facebook {
+    background: #3b5998;
+  }
+  
+  .rounded-social-buttons .social-button.facebook:hover,
+  .rounded-social-buttons .social-button.facebook:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+  }
+  
+  .rounded-social-buttons .social-button.whatsapp {
+    background: #25d366;
+  }
+  
+  .rounded-social-buttons .social-button.whatsapp:hover,
+  .rounded-social-buttons .social-button.whatsapp:focus {
+    color: #25d366;
+    background: #fefefe;
+    border-color: #25d366;
+  }
+  
+  .rounded-social-buttons .social-button.linkedin {
+    background: #007bb5;
+  }
+  
+  .rounded-social-buttons .social-button.linkedin:hover,
+  .rounded-social-buttons .social-button.linkedin:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
+  }
+  
+  .rounded-social-buttons .social-button.youtube {
+    background: #bb0000;
+  }
+  
+  .rounded-social-buttons .social-button.youtube:hover,
+  .rounded-social-buttons .social-button.youtube:focus {
+    color: #bb0000;
+    background: #fefefe;
+    border-color: #bb0000;
+  }
+  
+  .rounded-social-buttons .social-button.instagram {
+    background: #f09433;
+  }
+  
+  .rounded-social-buttons .social-button.instagram:hover,
+  .rounded-social-buttons .social-button.instagram:focus {
+    color: #f09433;
+    background: #fefefe;
+    border-color: #f09433;
+  }
+
+#copyright {
+    border-top: 0.1rem solid #FFF5ED;
+    padding-top: 2rem;
 }
