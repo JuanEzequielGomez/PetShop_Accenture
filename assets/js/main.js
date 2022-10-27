@@ -39,8 +39,35 @@ createApp({
 
 
                 })
+        },
+        addItem(event) {
+            if(!this.carrito.includes(event)){
+                this.carrito.push(event)
+                this.carrito[this.carrito.length - 1].unit = 1
+            } else {
+                this.carrito.map(prod => {
+                    prod == event ? prod.unit += 1 : ''
+                })
+            }
+            /* this.carrito.forEach(prod =>{
+                if(prod.nombre == event.nombre) {
+                    prod.unit += 1;
+                } else {
+                    this.carrito.push(event);
+                    this.carrito[this.carrito.length - 1].unit = 1;
+                }
+            }) */
+            console.log(this.carrito);
+            localStorage.setItem('carrito', JSON.stringify(this.carrito));
+        },
+        deleteItem(event) {
+            this.carrito = this.carrito.filter(eventf => eventf != event);
+            localStorage.setItem('carrito', JSON.stringify(this.carrito));
+        },
+        deleteCart() {
+            this.carrito.length = 0;
+            localStorage.setItem('carrito', JSON.stringify(this.carrito));
         }
-        
     },
 
     computed: {
