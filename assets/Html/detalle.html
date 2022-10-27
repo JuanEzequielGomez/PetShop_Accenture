@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./assets/styles.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -23,11 +23,11 @@
     <div class="d-flex justify-content-center flex-wrap gap-3 p-3 ">
         <div class="row p-3 gap-5 justify-content-center" >
       <div class="card" style="width: 15rem; height:25rem">
-        <img :src="articulo.imagen" class="card-img-top" alt="...">
+        <img :src="detalleArt.imagen" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{articulo.nombre}}</h5>
-          <p class="card-text"> {{articulo.descripcion}}</p>
-          <p class="card-text">{{articulo.precio}}</p>
+          <h5 class="card-title">{{detalleArt.nombre}}</h5>
+          <p class="card-text"> {{detalleArt.descripcion}}</p>
+          <p class="card-text">{{detalleArt.precio}}</p>
           <a href="#" class="btn btn-primary position-absolute bottom-0 mb-2 end-1">Agregar al carrito</a>
         </div>
       </div>
@@ -44,6 +44,6 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="../js/main.js"></script>
 
 </body>
