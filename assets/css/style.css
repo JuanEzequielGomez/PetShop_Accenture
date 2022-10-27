@@ -27,7 +27,7 @@ body{
     background-image: url(../img/fondo.png);
 }
 
-html{
+/* html{
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -35,14 +35,14 @@ html{
   
   body{
     height: 100%;
-  }
+  } */
 
-/* .body-special {
+.body-special {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: center;
-  } */
+  }
 
 /* ----------------------- NAV ----------------------- */
 
@@ -50,7 +50,7 @@ nav {
     /* height: 5vh; */
     /* background-color: #45526e; */
     background-color: #8F584D;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   
   .nav-link {
@@ -100,7 +100,7 @@ nav {
 /* ----------------------- PRIMERA SECCIÓN ----------------------- */
 
 .logo-main{
-    width: 25rem;
+    width: 20rem;
     padding-right: 3rem;
 }
 
@@ -448,6 +448,7 @@ nav {
       -webkit-perspective: inherit;
               perspective: inherit;
       z-index: 2;
+      font-size: 1rem;
   }
   
   .container-calification .back{
@@ -524,93 +525,103 @@ nav {
 
 /* ----------------------- CUARTA SECCIÓN ----------------------- */
 
-.hero-section{
-    align-items: flex-start;
-    background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
-    display: flex;
-    min-height: 100%;
-    justify-content: center;
-    padding: var(--spacing-xxl) var(--spacing-l);
+#hero-section-container{
+  height: 100%;
+      /* font-family: 'Montserrat', sans-serif; */
+  font-size: 14px;
+  }
+
+  #hero-section-container h1{
+    text-align: center;
+    }
+  
+  .hero-section{
+  align-items: flex-start;
+  /* background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%); */
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
   }
   
   .card__grid{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: var(--spacing-l);
-    grid-row-gap: var(--spacing-l);
-    max-width: var(--width-container);
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
   }
   
   @media(min-width: 540px){
-    .card__grid{
+  .card__grid{
       grid-template-columns: repeat(2, 1fr); 
-    }
+  }
   }
   
   @media(min-width: 960px){
-    .card__grid{
+  .card__grid{
       grid-template-columns: repeat(4, 1fr); 
-    }
+  }
   }
   
-  .card-team{
-    list-style: none;
-    position: relative;
+  .card__team{
+  list-style: none;
+  position: relative;
   }
   
-  .card-team:before{
-    content: '';
-    display: block;
-    padding-bottom: 150%;
-    width: 100%;
+  .card__team:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
   }
   
   .card__background{
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--spacing-l);
-    bottom: 0;
-    filter: brightness(0.75) saturate(1.2) contrast(0.85);
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform-origin: center;
-    transform: scale(1) translateZ(0);
-    transition: 
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: 
       filter 200ms linear,
       transform 200ms linear;
   }
   
-  .card-team:hover .card__background{
-    transform: scale(1.05) translateZ(0);
+  .card__team:hover .card__background{
+  transform: scale(1.05) translateZ(0);
   }
   
-  .card__grid:hover > .card:not(:hover) .card__background{
-    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  .card__grid:hover > .card__team:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
   }
   
   .card__content{
-    left: 0;
-    padding: var(--spacing-l);
-    position: absolute;
-    top: 0;
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
   }
   
   .card__category{
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: var(--spacing-s);
-    text-transform: uppercase;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
   }
   
   .card__heading{
-    color: var(--text-lighter);
-    font-size: 1.9rem;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
-    line-height: 1.4;
-    word-spacing: 100vw;
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
   }
 
 /* ----------------------- SUSCRIPCIÓN ----------------------- */
@@ -676,7 +687,7 @@ nav {
 
   footer{
     background-color: #8F584D !important;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .footer-links{
@@ -693,10 +704,10 @@ color: white;
 list-style: none;
 }
 
-/* #footer-special {
+#footer-special {
     margin-top: auto;
     width: 100%;
-  } */
+  }
 
 .svg-inline--fa {
     vertical-align: -0.2em;
@@ -710,9 +721,9 @@ list-style: none;
     display: inline-block;
     position: relative;
     cursor: pointer;
-    width: 3.5rem;
-    height: 3.5rem;
-    border: 0.125rem solid transparent;
+    width: 3rem;
+    height: 3rem;
+    /* border: 0.125rem solid transparent; */
     padding: 0;
     text-decoration: none;
     text-align: center;

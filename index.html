@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./assets/img/logo-dibujo.png" type="image/x-icon">
-    <title>PLEM - Home</title>
+    <title>PLEM Home</title>
 
     <!-- STYLES -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -60,7 +60,7 @@
             <section class="d-flex p-3 justify-content-center flex-column align-items-center">
 
                 <h1 class="m-3 fw-bold">¡Bienvenidos!</h1>
-                <div class="container d-flex justify-content-around align-items-center">
+                <div class="container d-flex justify-content-around align-items-center flex-wrap">
                     <img class="logo-main" src="./assets/img/logo-completo.png" alt="">
                     <p class="logo-main-p">
                         Somos un equipo de jovenes apasionados por nuestra labor. Acompañamos a dueños y mascotas
@@ -85,7 +85,7 @@
             </section>
             <section class=" container d-flex p-3 justify-content-center flex-column align-items-center">
 
-                <h1 class="m-3 fw-bold">Les presentamos a nuestros amiguitos</h1>
+                <h1 class="m-3 fw-bold text-center">Les presentamos a nuestros amiguitos</h1>
                 <div class="container container__box">
                     <div class="box1">
                     </div>
@@ -107,7 +107,7 @@
 
             </section>
             <section class=" container d-flex p-3 justify-content-center flex-column align-items-center">
-                <h1 class="m-3 fw-bold">¿Qué opinan nuestros clientes?</h1>
+                <h1 class="m-3 fw-bold text-center">¿Qué opinan nuestros clientes?</h1>
                 <div class="wrapper">
                     <div class="cols-calification">
                         <div class="col-calification" ontouchstart="this.classList.toggle('hover');">
@@ -122,6 +122,21 @@
                                     <div class="inner">
                                         <p>Muy conforme con el servicio brindado. Hicieron feliz a mi pulgoso. Muchas
                                             gracias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-calification" ontouchstart="this.classList.toggle('hover');">
+                            <div class="container-calification">
+                                <div class="front" style="background-image: url(assets/img/cliente7.jfif)">
+                                    <div class="inner">
+                                        <p>Eduardo</p>
+                                        <span>Golfo</span>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+                                        <p>¿Qué decirles? Buen trabajo, chiqüelos. Sigan así</p>
                                     </div>
                                 </div>
                             </div>
@@ -204,21 +219,6 @@
                         </div>
                         <div class="col-calification" ontouchstart="this.classList.toggle('hover');">
                             <div class="container-calification">
-                                <div class="front" style="background-image: url(assets/img/cliente7.jfif)">
-                                    <div class="inner">
-                                        <p>Eduardo</p>
-                                        <span>Golfo</span>
-                                    </div>
-                                </div>
-                                <div class="back">
-                                    <div class="inner">
-                                        <p>¿Qué decirles? Se les agradece la atención, chiqüelos. Sigan así</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-calification" ontouchstart="this.classList.toggle('hover');">
-                            <div class="container-calification">
                                 <div class="front" style="background-image: url(assets/img/cliente8.jpg)">
                                     <div class="inner">
                                         <p>Carla</p>
@@ -235,55 +235,56 @@
                     </div>
                 </div>
             </section>
-            <section class=" container d-flex p-3 justify-content-center flex-column align-items-center">
+            <section id="hero-section-container" class="container d-flex flex-column">
                 <h1 class="m-3 fw-bold">Nuestro equipo</h1>
+
                 <section class="hero-section">
                     <div class="card__grid">
-                        <a class="card-team" href="#">
+                        <div class="card__team" href="#">
                             <div class="card__background"
                                 style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
                             </div>
                             <div class="card__content">
-                                <p class="card__category">Category</p>
-                                <h3 class="card__heading">Example Card Heading</h3>
+                                <p class="card__category">Desarrolladora Web</p>
+                                <h3 class="card__heading">Paola Barila</h3>
                             </div>
-                        </a>
-                        <a class="card-team" href="#">
+                        </div>
+                        <div class="card__team" href="#">
                             <div class="card__background"
                                 style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
                             </div>
                             <div class="card__content">
-                                <p class="card__category">Category</p>
-                                <h3 class="card__heading">Example Card Heading</h3>
+                                <p class="card__category">Desarrollador Web</p>
+                                <h3 class="card__heading">Leandro Rios</h3>
                             </div>
-                        </a>
-                        <a class="card-team" href="#">
+                        </div>
+                        <div class="card__team" href="#">
                             <div class="card__background"
                                 style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
                             </div>
                             <div class="card__content">
-                                <p class="card__category">Category</p>
-                                <h3 class="card__heading">Example Card Heading</h3>
+                                <p class="card__category">Desarrollador Web</p>
+                                <h3 class="card__heading">Juan Ezequiel Gomez</h3>
                             </div>
-                            </li>
-                            <a class="card-team" href="#">
-                                <div class="card__background"
-                                    style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-                                </div>
-                                <div class="card__content">
-                                    <p class="card__category">Category</p>
-                                    <h3 class="card__heading">Example Card Heading</h3>
-                                </div>
-                            </a>
-                            <div>
+                        </div>
+                        <div class="card__team" href="#">
+                            <div class="card__background"
+                                style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+                            </div>
+                            <div class="card__content">
+                                <p class="card__category">Desarrollador Web</p>
+                                <h3 class="card__heading">Marco Antonio Aleman</h3>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </section>
-            <div class="container container-sub mb-3">
+            <div class="container container-sub mb-3 mt-3">
                 <div class="content-sub">
-                    <h2>Suscríbete a nuestro boletín</h2>
+                    <h2 class="text-center">Suscríbete a nuestro boletín</h2>
                     <p>Sin promesas de spam, ¡solo nuestras últimas noticias y obsequios!</p>
                     <form action="#">
-                        <input type="email" class="campo" placeholder="Introduce tu correo electrónico" required>
+                        <input type="email" class="campo" placeholder="Introduce tu mail" required>
                         <input type="submit" value="Suscribir" class="btn-sub">
                     </form>
                 </div>
