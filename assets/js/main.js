@@ -6,11 +6,11 @@ createApp({
             urlApi: "https://apipetshop.herokuapp.com/api/articulos",
             backUpArticulos: [],
             articulos: [],
-            articulosFarmacia: [],
-            articulosJugueteria: [],
             categorias: [],
             detalleArt: [],
-            carrito: []
+            carrito: [],
+            filtro: '',
+            busqueda: ''
         }
     },
     created() {
@@ -26,16 +26,28 @@ createApp({
         traerDatos() {
             fetch(this.urlApi).then(response => response.json())
                 .then(data => {
-                    this.articulos = data.response
-                    if (document.title == "PLEM Farmacia") {
-                        this.articulos = data.response.filter((articulo) => articulo.tipo == "Medicamento")
-                    } else if (document.title == "PLEM Jugueteria") {
-                        this.articulos = data.response.filter((articulo) => articulo.tipo == "Juguete")
-                    } else if (document.title == "PLEM Detalle") {
-                        let id = new URLSearchParams(location.search).get("_id");
-                        this.detalleArt = data.response.find((articulo) => articulo._id == id);
+                    this.backUpArticulos = data.response;
+                    let juguetes = data.response.filter((articulo) => articulo.tipo == "Juguete");
+                    let farmacia = data.response.filter((articulo) => articulo.tipo == 'Medicamento');
+                    let path = location.pathname;
 
+                    switch(true){
+                        case path.includes('jugueteria'):
+                            this.backUpArticulos = juguetes;
+                            break;
+                        case path.includes('farmacia'):
+                            this.backUpArticulos = farmacia;
+                            break;
+                        case path.includes('detalle'):
+                            let id = new URLSearchParams(location.search).get("_id");
+                            this.detalleArt = data.response.find((articulo) => articulo._id == id);
+                            break;
+                        /* case path.includes('past'):
+                            break; */
                     }
+                    
+                    this.articulos = this.backUpArticulos;
+
 
 
                 })
@@ -71,7 +83,42 @@ createApp({
     },
 
     computed: {
-
-    },
-
+        sort() {
+            switch(this.filtro) {
+                case 'menor':
+                    this.articulos.sort((a, b) => a.precio - b.precio);
+                break;
+                case 'mayor':
+                    this.articulos.sort((a, b) => b.precio - a.precio);
+                break;
+                case 'A - Z':
+                    this.articulos.sort((a, b) => {
+                        if(a.nombre == b.nombre) {
+                            return 0; 
+                        }
+                        if(a.nombre < b.nombre) {
+                            return -1;
+                        }
+                        return 1;
+                    });
+                break;
+                case 'Z - A':
+                    this.articulos.sort((a, b) => {
+                        if(a.nombre == b.nombre) {
+                            return 0; 
+                        }
+                        if(a.nombre > b.nombre) {
+                            return -1;
+                        }
+                        return 1;
+                    });
+                break;
+            }
+        },
+        superFiltro() {
+            let filter1 = this.backUpArticulos.filter(event => event.nombre.toLowerCase().includes(this.busqueda.toLowerCase().trim()));
+            /* let filter2 = this.checksOn.length > 0 ? filter1.filter(event => this.checksOn.includes(event.category)) : filter1; */
+            this.articulos = filter1;
+        }      
+    }
 }).mount('#app')
