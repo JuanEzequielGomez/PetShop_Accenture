@@ -39,12 +39,14 @@
     </nav>
 
     <header>
-      <h1>COMPRAS</h1>
+      <h1 class="title text-center fw-bolder p-3">Detalle del Producto</h1>
     </header>
 
     <main>
-      <div class="d-flex justify-content-center flex-wrap gap-3 p-3 ">
+      <div class=" card mb-3 card-container1 d-flex justify-content-center" style="max-width:65rem;">
+        
         <div class="row p-3 gap-5 justify-content-center">
+<<<<<<< Updated upstream
           <div class="card" style="width: 15rem; height:25rem">
             <img :src="articulo.imagen" class="card-img-top" alt="...">
             <div class="card-body">
@@ -52,9 +54,37 @@
               <p class="card-text"> {{articulo.descripcion}}</p>
               <p class="card-text">{{articulo.precio}}</p>
               <a href="#" class="btn btn-primary position-absolute bottom-0 mb-2 end-1">Agregar al carrito</a>
+=======
+          <div class="row g-0">
+            <div class="col-md-4">
+            <img :src="detalleArt.imagen" class="card-img-bottom m-3" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h3 class="card-title text-center">{{detalleArt.nombre}}</h3>
+              <p class="card-text text-center"> {{detalleArt.descripcion}}</p>
+              <p class="card-text text-end fw-bold"> Precio: $ {{detalleArt.precio}}</p>
+              <a href="#" class="btn btn-primary position-absolute bottom-0 mb-2 end-0 m-3  "
+                @click="addItem(detalleArt)">Comprar</a>
+>>>>>>> Stashed changes
             </div>
           </div>
-
+        </div>
+      </div>
+<!--<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+        <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
+      </div>
+    </div>
+  </div>
+</div>-->
         </div>
 
       </div>
