@@ -78,6 +78,46 @@
             </div>
         </main>
 
+        <!-- CARRITO -->
+
+        <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <img src="../img/cart-icon.svg" alt="icon-cart">
+            <div v-cloak class="counter-cart">{{carrito.length || 0}}</div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Carrito</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div v-if="carrito.length != 0" class="modal-body">
+                        <div v-for="product in carrito"
+                            class="row d-flex flex-row justify-content-between align-items-center">
+                            <p class="col-5">{{product.nombre}}</p>
+                            <p class="col-5">Price: ${{product.precio}}</p>
+                            <p class="col-1">x {{product.unit}}</p>
+                            <p class="col-1 btn btn-danger text-center" @click="deleteItem(product)">X</p>
+                        </div>
+                        <p class="text-center">Total: ${{carrito.reduce((acc, prod) => acc + prod.unit * prod.precio,
+                            0)}}</p>
+                    </div>
+                    <div v-else class="modal-body text-center">
+                        <p>El carrito esta vacio!!!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" @click="deleteCart">Vaciar Carrito</button>
+                        <button type="button" class="btn btn-success">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN CARRITO -->
+
         <footer id="footer-special" class="pb-4 pt-4 text-white">
             <!-- <div>
           <ul class="d-flex justify-content-center footer-links">

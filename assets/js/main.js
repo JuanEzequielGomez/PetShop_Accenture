@@ -53,23 +53,14 @@ createApp({
                 })
         },
         addItem(event) {
-            if(!this.carrito.includes(event)){
+            if(!this.carrito.some(element => element.nombre == event.nombre)){
                 this.carrito.push(event)
                 this.carrito[this.carrito.length - 1].unit = 1
             } else {
                 this.carrito.map(prod => {
-                    prod == event ? prod.unit += 1 : ''
+                    prod.nombre == event.nombre  ? prod.unit += 1 : ''
                 })
             }
-            /* this.carrito.forEach(prod =>{
-                if(prod.nombre == event.nombre) {
-                    prod.unit += 1;
-                } else {
-                    this.carrito.push(event);
-                    this.carrito[this.carrito.length - 1].unit = 1;
-                }
-            }) */
-            console.log(this.carrito);
             localStorage.setItem('carrito', JSON.stringify(this.carrito));
         },
         deleteItem(event) {
