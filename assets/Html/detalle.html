@@ -46,15 +46,6 @@
       <div class=" card mb-3 card-container1 d-flex justify-content-center" style="max-width:65rem;">
         
         <div class="row p-3 gap-5 justify-content-center">
-<<<<<<< Updated upstream
-          <div class="card" style="width: 15rem; height:25rem">
-            <img :src="articulo.imagen" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{articulo.nombre}}</h5>
-              <p class="card-text"> {{articulo.descripcion}}</p>
-              <p class="card-text">{{articulo.precio}}</p>
-              <a href="#" class="btn btn-primary position-absolute bottom-0 mb-2 end-1">Agregar al carrito</a>
-=======
           <div class="row g-0">
             <div class="col-md-4">
             <img :src="detalleArt.imagen" class="card-img-bottom m-3" alt="...">
@@ -66,7 +57,6 @@
               <p class="card-text text-end fw-bold"> Precio: $ {{detalleArt.precio}}</p>
               <a href="#" class="btn btn-primary position-absolute bottom-0 mb-2 end-0 m-3  "
                 @click="addItem(detalleArt)">Comprar</a>
->>>>>>> Stashed changes
             </div>
           </div>
         </div>
