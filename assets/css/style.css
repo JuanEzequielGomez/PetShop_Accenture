@@ -1259,3 +1259,44 @@ list-style: none;
   border-radius: 50%;
   padding: 0.5rem;
 }
+
+/* ----------------------- DETALLES ----------------------- */
+
+/* .card-container1{
+  background:rgb(69, 82, 110, 0.5);
+  width: 85%;
+  height: 35rem;
+  color: white;
+  font-family: 'Rock Salt', cursive;
+  box-shadow: 2px 2px 5px rgba(14, 3, 49, 0.9);
+  border-radius: 5rem;
+  border-radius: 5rem 5rem 0 5rem;
+  opacity: 0.5;
+  backdrop-filter: blur(2px);
+}
+
+.card-img-bottom{
+  object-fit: contain;
+  border-radius: 3rem 3rem 3rem 3rem;
+
+} */
+
+.card-container1{
+  background:rgb(69, 82, 110, 0.5);
+  width: 85%;
+  /* height: 35rem; */
+  color: white;
+  font-family: 'Rock Salt', cursive;
+  box-shadow: 2px 2px 5px rgba(14, 3, 49, 0.9);
+  /* border-radius: 5rem; /
+  border-radius: 5rem 5rem 0 5rem;
+  / opacity: 0.5; /
+  / backdrop-filter: blur(2px); */
+}
+
+.card-img-bottom{
+  object-fit: contain;
+  border-radius: 3rem 3rem 3rem 3rem;
+
+}
+
