@@ -1000,3 +1000,39 @@ list-style: none;
     border-top: 0.1rem solid #FFF5ED;
     padding-top: 2rem;
 } */
+
+/* ----------------------- CARRITO ----------------------- */
+
+.icon-cart {
+  width: 5rem;
+  height: 5rem;
+  background-color: #FFF5ED;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #8F584D;
+  z-index: 999999;
+}
+
+.icon-cart img {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-cart div {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  background-color: #8F584D;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
