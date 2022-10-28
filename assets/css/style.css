@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 :root{
     --background-dark: #2d3548;
@@ -49,7 +51,7 @@ body{
 nav {
     /* height: 5vh; */
     /* background-color: #45526e; */
-    background-color: #8F584D !important; 
+    background-color: #8f584d !important; 
     font-size: 1.2rem;
     background-image: url(../img/fondo2.png);
     background-size: 20%;
@@ -714,14 +716,17 @@ nav {
 }
 
 .card-title{
-  height: 20%;
+  height: 15%;
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .card-text{
   height: 15%;
-  font-family: 'Amatic SC', cursive;
-  margin-top: 10%;
+  margin-top: 1rem;
   font-size: 1.5rem;
+  font-family: 'Caveat', cursive;
   /* color: #fff;
   text-shadow:
       0 0 5px rgba(0,178,255,1),
@@ -737,10 +742,10 @@ nav {
 
 .card-text-hot{
   height: 15%;
-  font-family: 'Amatic SC', cursive;
-  margin-top: 10%;
+  margin-top: 1rem;
   font-size: 1.5rem;
   color: #fff;
+  font-family: 'Caveat', cursive;
   text-shadow:
       0 0 5px rgb(216, 36, 9,1),
       0 0 10px rgba(216, 36, 9,1),
@@ -788,6 +793,7 @@ nav {
       0 0 180px rgba(38,104,127,1);
   box-shadow: inset black -1px -1px 3px;
   padding: 1rem;
+  font-family: 'Bebas Neue', cursive;
 }
 
 /* .card-price button{

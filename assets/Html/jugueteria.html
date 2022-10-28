@@ -108,8 +108,8 @@
             <img :src="articulo.imagen" class="card-img-top img-card" alt="...">
             <div class="card-body">
               <h5 class="card-title text-center pt-2">{{articulo.nombre}}</h5>
-              <p v-if="articulo.stock > 5" class="card-text text-center fw-bold card-text-hot">Últimas unidades</p>
-              <p v-if="articulo.stock <= 5" class="card-text text-center fw-bold">En stock</p>
+              <p v-if="articulo.stock > 5" class="card-text text-center card-text-hot">Últimas unidades</p>
+              <p v-if="articulo.stock <= 5" class="card-text text-center ">En stock</p>
               <div class="card-price d-flex align-items-center justify-content-around">
                 <div>$ {{articulo.precio}}</div>
                 <div>
