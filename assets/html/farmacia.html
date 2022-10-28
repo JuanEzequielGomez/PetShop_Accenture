@@ -85,14 +85,15 @@
       <div class="d-flex justify-content-center flex-wrap gap-3 p-3 ">
         <p class="display-3 "></p>
         <div v-for="articulo in articulos" class="row p-3 gap-5 justify-content-center">
-          <div class="card" style="width: 15rem; height:25rem">
+          <div class="card" style="width: 16rem; height:30rem">
             <img :src="articulo.imagen" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{articulo.nombre}}</h5>
-              <p v-if="articulo.stock > 5" class="card-text">Últimas unidades</p>
-              <p class="card-text">{{articulo.precio}}</p>
+             
+              <h5 class="card-title text-sm-center">{{articulo.nombre}}</h5>
+              <p v-if="articulo.stock > 5" class="card-text1 p-1 mb-1 bg-danger text-white text-center">Últimas unidades</p>
+              <p class="card-text">$ {{articulo.precio}}</p>
               <a :href="'./detalle.html?_id=' + articulo._id"
-                class="btn btn-primary position-absolute bottom-0 mb-2 end-1">Ir a comprar</a>></a>
+                class="btn btn-secondary position-absolute bottom-0 mb-2 end-1">Ir a comprar</a>
             </div>
           </div>
         </div>

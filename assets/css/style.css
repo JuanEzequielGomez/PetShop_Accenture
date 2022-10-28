@@ -1000,3 +1000,11 @@ list-style: none;
     border-top: 0.1rem solid #FFF5ED;
     padding-top: 2rem;
 } */
+/*--------------CARDS------*/
+
+.card{
+  border-top: #492e29 1.5;
+  border-right: #2d3548 1;
+  border-left: #2d3548 1;
+  border-bottom: #3a231f 1;
+}
