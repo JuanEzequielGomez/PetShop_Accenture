@@ -28,11 +28,11 @@
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end col-xxl-10">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="./farmacia.html" class="nav-link">Farmacia</a></li>
+            <li class="nav-item active"><a href="/index.html" class="nav-link underline-hover-effect">Home</a></li>
+            <li class="nav-item"><a href="./farmacia.html" class="nav-link underline-hover-effect">Farmacia</a></li>
             <li class="nav-item"><a href="#" class="nav-link" id="active">Juguetes</a>
             </li>
-            <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="./contacto.html" class="nav-link underline-hover-effect">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -76,15 +76,17 @@
       <!-- FILTROS -->
       <span>{{sort}}</span>
       <span>{{superFiltro}}</span>
-      <div class="container filtros-ctn d-flex justify-content-around align-items-center mt-3 pt-3 pb-3 fw-bold">
-        <p>Hay {{articulos.length}} articulos</p>
-        <form class="d-flex col-md-6 col-lg-3" role="search">
+      <div class="container filtros-ctn d-flex justify-content-around align-items-center mt-3 pt-3 pb-3 fw-bold"
+        id="container-filtros">
+        <div class="d-flex justify-content-center align-items-center">Hay {{articulos.length}} articulos
+        </div>
+        <form class="d-flex col-md-6 col-lg-3 placeholder-wave" role="search">
           <input v-model="busqueda" class="form-control me-2 text-center" type="search" placeholder="Search"
             aria-label="Search">
         </form>
         <div class="sort">
           <label for="filtro">Filtrar por:</label>
-          <select v-model="filtro" name="filtro" id="">
+          <select v-model="filtro" name="filtro" id="filtro-cards">
             <option disabled selected value="">Seleccionar</option>
             <option value="menor">Menor Precio</option>
             <option value="mayor">Mayor Precio</option>
