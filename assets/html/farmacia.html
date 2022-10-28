@@ -91,7 +91,7 @@
               <h5 class="card-title">{{articulo.nombre}}</h5>
               <p v-if="articulo.stock > 5" class="card-text">Últimas unidades</p>
               <p class="card-text">{{articulo.precio}}</p>
-              <a href="./detalle.html?_id='+articulo._id"
+              <a :href="'./detalle.html?_id=' + articulo._id"
                 class="btn btn-primary position-absolute bottom-0 mb-2 end-1">Ir a comprar</a>></a>
             </div>
           </div>
