@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <main>
+    <main class="container">
       <section class="d-flex p-3 justify-content-center flex-column align-items-center">
 
         <h1 class="m-3 fw-bold text-center">¡Bienvenidos a nuestra Juguetería!</h1>
@@ -104,18 +104,24 @@
           <img src='../img/dog-question.png' class="card-img-top" alt="...">
         </div>
         <div v-for="articulo in articulos" class="row p-3 gap-5 justify-content-center">
-          <div class="card" style="width: 15rem; height:25rem">
-            <img :src="articulo.imagen" class="card-img-top" alt="...">
+          <div class="card-container">
+            <img :src="articulo.imagen" class="card-img-top img-card" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{articulo.nombre}}</h5>
-              <p class="card-text"> {{articulo.descripcion}}</p>
-              <p class="card-text">$ {{articulo.precio}}</p>
-              <a :href="'./detalle.html?_id='+articulo._id"
-                class="btn btn-primary position-absolute bottom-0 mb-2 end-1">More Info</a>
+              <h5 class="card-title text-center pt-2">{{articulo.nombre}}</h5>
+              <p v-if="articulo.stock > 5" class="card-text text-center fw-bold card-text-hot">Últimas unidades</p>
+              <p v-if="articulo.stock <= 5" class="card-text text-center fw-bold">En stock</p>
+              <div class="card-price d-flex align-items-center justify-content-around">
+                <div>$ {{articulo.precio}}</div>
+                <div>
+                  <a :href="'./detalle.html?_id='+articulo._id" class="btn btn-primary">Ir a
+                    comprar</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="container container-sub-juguetes mb-3 mt-3">
         <div class="content-sub-juguetes">
           <h2 class="text-center">Suscríbete a nuestro boletín</h2>

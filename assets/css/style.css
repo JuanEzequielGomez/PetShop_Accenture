@@ -148,7 +148,7 @@ nav {
 }
 
 #container-filtros{
-  background-image: url(../img/fondo2.png);
+  background-image: url(../img/fondo3.png);
   background-size: 20%;
 }
 
@@ -684,29 +684,43 @@ nav {
   word-spacing: 100vw;
   }
 
-/* ----------------------- FARMACIA Y JUGUETERÍA ----------------------- */
+/* ----------------------- PRODUCTOS FARMACIA Y JUGUETERÍA ----------------------- */
 
 .card-container{
-  background:rgb(69, 82, 110, 0.5);
+  background-color:rgb(211, 169, 137,0.5) !important;
+  background-image: url(../img/fondo3.png);
+  background-size: 50%;
   width: 20rem;
   height: 35rem;
-  color: white;
+  color: black;
   font-family: 'Rock Salt', cursive;
-  box-shadow: 2px 2px 5px rgba(14, 3, 49, 0.9);
+  box-shadow: 2px 2px 5px rgb(0, 0, 0,0.5);
   /* border-radius: 5rem; */
   border-radius: 5rem 5rem 0 5rem;
-  /* opacity: 0.5; */
-  /* backdrop-filter: blur(2px); */
+  /* opacity: 0.9; */
+  backdrop-filter: blur(5px);
 }
+
+  /* background-color:#D3A989 !important;
+  background-image: url(../img/fondo2.png); */
+
 
 .card-container:hover{
   transform: scale(1.05);
 }
 
-.card-text{
+.card-body{
   height: 40%;
+}
+
+.card-title{
+  height: 20%;
+}
+
+.card-text{
+  height: 15%;
   font-family: 'Amatic SC', cursive;
-  margin-top: 5%;
+  margin-top: 10%;
   font-size: 1.5rem;
   /* color: #fff;
   text-shadow:
@@ -719,6 +733,24 @@ nav {
       0 0 100px rgba(38,104,127,1),
       0 0 140px rgba(38,104,127,1),
       0 0 180px rgba(38,104,127,1); */
+}
+
+.card-text-hot{
+  height: 15%;
+  font-family: 'Amatic SC', cursive;
+  margin-top: 10%;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow:
+      0 0 5px rgb(216, 36, 9,1),
+      0 0 10px rgba(216, 36, 9,1),
+      0 0 20px rgba(216, 36, 9,1),
+      0 0 40px rgba(216, 36, 9,1),
+      0 0 80px rgba(216, 36, 9,1),
+      0 0 90px rgba(216, 36, 9,1),
+      0 0 100px rgba(216, 36, 9,1),
+      0 0 140px rgba(216, 36, 9,1),
+      0 0 180px rgba(216, 36, 9,1);
 }
 
 .img-card{
@@ -742,7 +774,7 @@ nav {
 } */
 
 .card-price a{
-  background: rgb(2, 2, 46) !important;
+  background: #02022e !important;
   color: #fff;
   text-shadow:
       0 0 5px rgba(0,178,255,1),
@@ -776,7 +808,7 @@ nav {
 } */
 
 .card-price div{
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .card-price a:hover{
