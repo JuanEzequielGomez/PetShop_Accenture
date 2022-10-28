@@ -101,11 +101,22 @@ nav {
 
 /* ----------------------- MAIN ----------------------- */
 
+/* ----------------------- CHECKBOXS ----------------------- */
+
+.filtros-ctn{
+  background-color:#D3A989 !important;
+}
+
 /* ----------------------- PRIMERA SECCIÓN ----------------------- */
 
 .logo-main{
     width: 20rem;
     padding-right: 3rem;
+}
+
+.logo-main2{
+  width: 15rem;
+  padding-right: 3rem;
 }
 
 .logo-main-p{

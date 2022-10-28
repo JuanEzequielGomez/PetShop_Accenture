@@ -59,25 +59,14 @@
 
         <h1 class="m-3 fw-bold text-center">¡Bienvenidos a nuestra Farmacia!</h1>
         <div class="container d-flex justify-content-around align-items-center flex-wrap">
-          <img class="logo-main" src="../img/logo-farmacia.png" alt="">
-          <p class="logo-main-p">
-            Somos un equipo de jovenes apasionados por nuestra labor. Acompañamos a dueños y mascotas
-            en San
-            Miguel de Tucumán desde el año 2014. Honrando la confianza que nos das te ofrecemos
-            productos y
-            servicios de alta calidad que cumplen con las necesidades de tus queridas mascotas.<br><br>
-            Reconocemos a las mascotas como un miembro más de la familia, a las que debemos cuidar,
-            proteger, y brindar el mejor cuidado para que tengan una excelente calidad de vida. Para
-            ello
-            ofrecemos la más amplia variedad en alimentos balanceados, accesorios, farmacia, servicios
-            experimentados (veterinaria, peluquería), envios a domicilio y mucho más!<br><br>
+          <img class="logo-main2" src="../img/logo-farmacia.png" alt="">
+          <p class="logo-main-p fw-bold">
+            Aquí encontrarás una amplia variedad en medicamentos para el cuidado y la salud de tus mascotas.<br><br>
             Te invitamos a visitar nuestros locales o hacer tu pedido a a tu sucursal más cercana por
             medio
-            de whatsapp. También puedes encontrarnos en Pedidos Ya y Rappi (SMT - Yerba Buena
-            -Concepción) o
-            navegar por nuestro sitio, donde encontrarás el catálogo de productos, promociones para todo
-            el
-            pais y el detalle de nuestros servicios de veterinaria y peluquería canina.
+            de whatsapp.<br><br>
+            También puedes encontrarnos en Pedidos Ya y Rappi (SMT - Yerba Buena
+            -Concepción).
           </p>
         </div>
       </section>
@@ -118,7 +107,7 @@
             <div class="card-body">
               <h5 class="card-title">{{articulo.nombre}}</h5>
               <p v-if="articulo.stock > 5" class="card-text">Últimas unidades</p>
-              <p class="card-text">{{articulo.precio}}</p>
+              <p class="card-text">$ {{articulo.precio}}</p>
               <a :href="'./detalle.html?_id='+articulo._id"
                 class="btn btn-primary position-absolute bottom-0 mb-2 end-1">Ir a comprar</a>></a>
             </div>
