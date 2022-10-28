@@ -70,18 +70,9 @@ createApp({
         deleteCart() {
             this.carrito.length = 0;
             localStorage.setItem('carrito', JSON.stringify(this.carrito));
-        },
-        sendForm() {
-            Swal.fire({
-                title: 'Formulario enviado!',
-                text: 'Gracias por su tiempo.',
-                icon: 'success',
-                confirmButtonText: 'Continue'
-            })
         }
-        
     },
-    
+
     computed: {
         sort() {
             switch(this.filtro) {

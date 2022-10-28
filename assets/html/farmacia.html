@@ -81,9 +81,37 @@
           </p>
         </div>
       </section>
+
       <h1 class="m-1 text-center fw-bold">Nuestros productos</h1>
+
+      <!-- FILTROS -->
+      <span>{{sort}}</span>
+      <span>{{superFiltro}}</span>
+      <div class="filtros-ctn d-flex justify-content-between">
+        <p>Hay {{articulos.length}} articulos</p>
+        <form class="d-flex col-md-6 col-lg-3" role="search">
+          <input v-model="busqueda" class="form-control me-2 text-center" type="search" placeholder="Search"
+            aria-label="Search">
+        </form>
+        <div class="sort">
+          <label for="filtro">Filtrar por:</label>
+          <select v-model="filtro" name="filtro" id="">
+            <option disabled selected value="">Seleccionar</option>
+            <option value="menor">Menor Precio</option>
+            <option value="mayor">Mayor Precio</option>
+            <option value="A - Z">A - Z</option>
+            <option value="Z - A">Z - A</option>
+          </select>
+        </div>
+      </div>
+      <!-- FILTROS -->
+
       <div class="d-flex justify-content-center flex-wrap gap-3 p-3 ">
         <p class="display-3 "></p>
+        <div v-cloak v-if="backUpArticulos.length != 0 && articulos.length == 0">
+          <h3 class='text-center'>Ups!... no se encontraron resultados</h3>
+          <img src='../img/dog-question.png' class="card-img-top" alt="...">
+        </div>
         <div v-for="articulo in articulos" class="row p-3 gap-5 justify-content-center">
           <div class="card" style="width: 15rem; height:25rem">
             <img :src="articulo.imagen" class="card-img-top" alt="...">
@@ -108,6 +136,43 @@
         </div>
       </div>
     </main>
+
+    <!-- CARRITO -->
+
+    <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <img src="../img/cart-icon.svg" alt="icon-cart">
+      <div v-cloak class="counter-cart">{{carrito.length || 0}}</div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Carrito</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div v-if="carrito.length != 0" class="modal-body">
+            <div v-for="product in carrito" class="row d-flex flex-row justify-content-between align-items-center">
+              <p class="col-5">{{product.nombre}}</p>
+              <p class="col-5">Price: ${{product.precio}}</p>
+              <p class="col-1">x {{product.unit}}</p>
+              <p class="col-1 btn btn-danger text-center" @click="deleteItem(product)">X</p>
+            </div>
+            <p class="text-center">Total: ${{carrito.reduce((acc, prod) => acc + prod.unit * prod.precio, 0)}}</p>
+          </div>
+          <div v-else class="modal-body text-center">
+            <p>El carrito esta vacio!!!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" @click="deleteCart">Vaciar Carrito</button>
+            <button type="button" class="btn btn-success">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN CARRITO -->
 
     <footer id="footer-special" class="pb-4 pt-4 text-white">
       <!-- <div>
