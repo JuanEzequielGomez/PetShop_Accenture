@@ -46,6 +46,20 @@ body{
     justify-content: center;
   }
 
+/* ----------------------- TAMAÑOS ----------------------- */
+
+#nav-special{
+  min-height: 8vh;
+}
+
+#main-special{
+  min-height: 87vh;
+}
+
+#footer-special2{
+  min-height: 5vh;
+}
+
 /* ----------------------- NAV ----------------------- */
 
 nav {
