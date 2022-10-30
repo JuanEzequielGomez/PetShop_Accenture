@@ -32,10 +32,13 @@
                 <div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end col-xxl-10">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a href="#" class="nav-link" id="active">Home</a></li>
-                        <li class="nav-item"><a href="./assets/html/farmacia.html" class="nav-link">Farmacia</a></li>
-                        <li class="nav-item"><a href="./assets/html/jugueteria.html" class="nav-link">Juguetes</a>
+                        <li class="nav-item"><a href="./assets/html/farmacia.html"
+                                class="nav-link underline-hover-effect">Farmacia</a></li>
+                        <li class="nav-item"><a href="./assets/html/jugueteria.html"
+                                class="nav-link underline-hover-effect">Juguetes</a>
                         </li>
-                        <li class="nav-item"><a href="./assets/html/contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="nav-item"><a href="./assets/html/contacto.html"
+                                class="nav-link underline-hover-effect">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +65,7 @@
                 <h1 class="m-3 fw-bold">¡Bienvenidos!</h1>
                 <div class="container d-flex justify-content-around align-items-center flex-wrap">
                     <img class="logo-main" src="./assets/img/logo-completo.png" alt="">
-                    <p class="logo-main-p">
+                    <p class="logo-main-p fw-bold">
                         Somos un equipo de jovenes apasionados por nuestra labor. Acompañamos a dueños y mascotas
                         en San
                         Miguel de Tucumán desde el año 2014. Honrando la confianza que nos das te ofrecemos
@@ -242,7 +245,7 @@
                     <div class="card__grid">
                         <div class="card__team" href="#">
                             <div class="card__background"
-                                style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
+                                style="background-image: url(https://cdnj.upsocl.com/wp-content/uploads/2015/12/woman-creates-enchanting-portraits-of-dogs-in-the-austrian-wilderness-2__880.jpg)">
                             </div>
                             <div class="card__content">
                                 <p class="card__category">Desarrolladora Web</p>
@@ -251,7 +254,7 @@
                         </div>
                         <div class="card__team" href="#">
                             <div class="card__background"
-                                style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+                                style="background-image: url(https://64.media.tumblr.com/e67fd3122cf2a03a64e12b0e95fce792/76285e96a00d7583-94/s640x960/9631ce94195fa0aab39c440df15de232b747e6ee.png)">
                             </div>
                             <div class="card__content">
                                 <p class="card__category">Desarrollador Web</p>
@@ -260,20 +263,20 @@
                         </div>
                         <div class="card__team" href="#">
                             <div class="card__background"
-                                style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+                                style="background-image: url(https://i.ebayimg.com/images/g/A5sAAOSw9EZcvQ~R/s-l400.jpg)">
                             </div>
                             <div class="card__content">
                                 <p class="card__category">Desarrollador Web</p>
-                                <h3 class="card__heading">Juan Ezequiel Gomez</h3>
+                                <h3 class="card__heading">Ezequiel Gomez</h3>
                             </div>
                         </div>
                         <div class="card__team" href="#">
                             <div class="card__background"
-                                style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+                                style="background-image: url(https://data.whicdn.com/images/111971433/original.jpg)">
                             </div>
                             <div class="card__content">
                                 <p class="card__category">Desarrollador Web</p>
-                                <h3 class="card__heading">Marco Antonio Aleman</h3>
+                                <h3 class="card__heading">Marco Aleman</h3>
                             </div>
                         </div>
                     </div>
@@ -283,13 +286,54 @@
                 <div class="content-sub">
                     <h2 class="text-center">Suscríbete a nuestro boletín</h2>
                     <p>Sin promesas de spam, ¡solo nuestras últimas noticias y obsequios!</p>
-                    <form action="#">
+                    <form action="#" @submit.prevent="suscriptionForm">
                         <input type="email" class="campo" placeholder="Introduce tu mail" required>
                         <input type="submit" value="Suscribir" class="btn-sub">
                     </form>
                 </div>
             </div>
         </main>
+
+        <!-- CARRITO -->
+
+        <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <img src="./assets/img/cart-icon.svg" alt="icon-cart">
+            <div v-cloak class="counter-cart">{{carrito.length || 0}}</div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Carrito</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div v-if="carrito.length != 0" class="modal-body">
+                        <div v-for="product in carrito"
+                            class="row d-flex flex-row justify-content-between align-items-center">
+                            <p class="col-5">{{product.nombre}}</p>
+                            <p class="col-5">Price: ${{product.precio}}</p>
+                            <p class="col-1">x {{product.unit}}</p>
+                            <p class="col-1 btn btn-danger text-center" @click="deleteItem(product)">X</p>
+                        </div>
+                        <p class="text-center">Total: ${{carrito.reduce((acc, prod) => acc + prod.unit * prod.precio,
+                            0)}}</p>
+                    </div>
+                    <div v-else class="modal-body text-center">
+                        <p>El carrito esta vacio!!!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" @click="deleteCart">Vaciar Carrito</button>
+                        <button type="button" class="btn btn-success">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIN CARRITO -->
+
         <footer id="footer-special" class="pb-4 pt-4 text-white bg-lineas-diagonales">
             <!-- <div>
                 <ul class="d-flex justify-content-center footer-links">
@@ -348,6 +392,7 @@
 
     </div>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

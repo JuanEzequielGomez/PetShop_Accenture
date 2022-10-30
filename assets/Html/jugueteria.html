@@ -28,11 +28,11 @@
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end col-xxl-10">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="./farmacia.html" class="nav-link">Farmacia</a></li>
+            <li class="nav-item active"><a href="/index.html" class="nav-link underline-hover-effect">Home</a></li>
+            <li class="nav-item"><a href="./farmacia.html" class="nav-link underline-hover-effect">Farmacia</a></li>
             <li class="nav-item"><a href="#" class="nav-link" id="active">Juguetes</a>
             </li>
-            <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="./contacto.html" class="nav-link underline-hover-effect">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -54,49 +54,74 @@
       </div>
     </div>
 
-    <main>
+    <main class="container">
       <section class="d-flex p-3 justify-content-center flex-column align-items-center">
 
         <h1 class="m-3 fw-bold text-center">¡Bienvenidos a nuestra Juguetería!</h1>
         <div class="container d-flex justify-content-around align-items-center flex-wrap">
-          <img class="logo-main" src="../img/logo-juguetes.png" alt="">
-          <p class="logo-main-p">
-            Somos un equipo de jovenes apasionados por nuestra labor. Acompañamos a dueños y mascotas
-            en San
-            Miguel de Tucumán desde el año 2014. Honrando la confianza que nos das te ofrecemos
-            productos y
-            servicios de alta calidad que cumplen con las necesidades de tus queridas mascotas.<br><br>
-            Reconocemos a las mascotas como un miembro más de la familia, a las que debemos cuidar,
-            proteger, y brindar el mejor cuidado para que tengan una excelente calidad de vida. Para
-            ello
-            ofrecemos la más amplia variedad en alimentos balanceados, accesorios, farmacia, servicios
-            experimentados (veterinaria, peluquería), envios a domicilio y mucho más!<br><br>
+          <img class="logo-main2" src="../img/logo-juguetes.png" alt="">
+          <p class="logo-main-p fw-bold">
+            Contamos con una gran variedad de accesorios y juguetes que harán felices a tus mascotas.
+            Aprovecha tu paso por aquí y llévale un regalo.<br><br>
             Te invitamos a visitar nuestros locales o hacer tu pedido a a tu sucursal más cercana por
             medio
-            de whatsapp. También puedes encontrarnos en Pedidos Ya y Rappi (SMT - Yerba Buena
-            -Concepción) o
-            navegar por nuestro sitio, donde encontrarás el catálogo de productos, promociones para todo
-            el
-            pais y el detalle de nuestros servicios de veterinaria y peluquería canina.
+            de whatsapp.<br><br>
+            También puedes encontrarnos en Pedidos Ya y Rappi (SMT - Yerba Buena
+            -Concepción).
           </p>
         </div>
       </section>
       <h1 class="m-1 text-center fw-bold">Nuestros productos</h1>
+
+      <!-- FILTROS -->
+      <span>{{sort}}</span>
+      <span>{{superFiltro}}</span>
+      <div class="container filtros-ctn d-flex justify-content-around align-items-center mt-3 pt-3 pb-3 fw-bold"
+        id="container-filtros">
+        <div class="d-flex justify-content-center align-items-center">Hay {{articulos.length}} articulos
+        </div>
+        <form class="d-flex col-md-6 col-lg-3 placeholder-wave" role="search">
+          <input v-model="busqueda" class="form-control me-2 text-center" type="search" placeholder="Search"
+            aria-label="Search">
+        </form>
+        <div class="sort">
+          <label for="filtro">Filtrar por:</label>
+          <select v-model="filtro" name="filtro" id="filtro-cards">
+            <option disabled selected value="">Seleccionar</option>
+            <option value="menor">Menor Precio</option>
+            <option value="mayor">Mayor Precio</option>
+            <option value="A - Z">A - Z</option>
+            <option value="Z - A">Z - A</option>
+          </select>
+        </div>
+      </div>
+      <!-- FILTROS -->
+
       <div class="d-flex justify-content-center flex-wrap gap-3 p-3 ">
         <p class="display-3 "></p>
+        <div v-cloak v-if="backUpArticulos.length != 0 && articulos.length == 0">
+          <h3 class='text-center'>Ups!... no se encontraron resultados</h3>
+          <img src='../img/dog-question.png' class="card-img-top" alt="...">
+        </div>
         <div v-for="articulo in articulos" class="row p-3 gap-5 justify-content-center">
-          <div class="card" style="width: 15rem; height:25rem">
-            <img :src="articulo.imagen" class="card-img-top" alt="...">
+          <div class="card-container">
+            <img :src="articulo.imagen" class="card-img-top img-card" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{articulo.nombre}}</h5>
-              <p class="card-text"> {{articulo.descripcion}}</p>
-              <p class="card-text">{{articulo.precio}}</p>
-              <a :href="'./detalle.html?_id='+articulo._id"
-                class="btn btn-primary position-absolute bottom-0 mb-2 end-1">More Info</a>
+              <h5 class="card-title text-center pt-2">{{articulo.nombre}}</h5>
+              <p v-if="articulo.stock > 5" class="card-text text-center card-text-hot">Últimas unidades</p>
+              <p v-if="articulo.stock <= 5" class="card-text text-center ">En stock</p>
+              <div class="card-price d-flex align-items-center justify-content-around">
+                <div>$ {{articulo.precio}}</div>
+                <div>
+                  <a :href="'./detalle.html?_id='+articulo._id" class="btn btn-primary">Ir a
+                    comprar</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="container container-sub-juguetes mb-3 mt-3">
         <div class="content-sub-juguetes">
           <h2 class="text-center">Suscríbete a nuestro boletín</h2>
@@ -108,6 +133,44 @@
         </div>
       </div>
     </main>
+
+    <!-- CARRITO -->
+
+    <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <img src="../img/cart-icon.svg" alt="icon-cart">
+      <div v-cloak class="counter-cart">{{carrito.length || 0}}</div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Carrito</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div v-if="carrito.length != 0" class="modal-body">
+            <div v-for="product in carrito" class="row d-flex flex-row justify-content-between align-items-center">
+              <p class="col-5">{{product.nombre}}</p>
+              <p class="col-5">Price: ${{product.precio}}</p>
+              <p class="col-1">x {{product.unit}}</p>
+              <p class="col-1 btn btn-danger text-center" @click="deleteItem(product)">X</p>
+            </div>
+            <p class="text-center">Total: ${{carrito.reduce((acc, prod) => acc + prod.unit * prod.precio, 0)}}</p>
+          </div>
+          <div v-else class="modal-body text-center">
+            <p>El carrito esta vacio!!!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" @click="deleteCart">Vaciar Carrito</button>
+            <button type="button" class="btn btn-success">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN CARRITO -->
+
     <footer id="footer-special" class="pb-4 pt-4 text-white">
       <!-- <div>
           <ul class="d-flex justify-content-center footer-links">
