@@ -110,12 +110,9 @@
               <h5 class="card-title text-center pt-2">{{articulo.nombre}}</h5>
               <div class="form-floating">
                 <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                  <option selected>Abre este menú</option>
-                  <option value="1">Uno</option>
-                  <option value="2">Dos</option>
-                  <option value="3">Tres</option>
+                  <option selected class="card-desc fs-6 text-ligther">{{articulo.descripcion}}</option>
                 </select>
-                <label for="floatingSelect">Funciona con selects</label>
+                <label for="floatingSelect">Descripción:</label>
               </div>
               <p v-if="articulo.stock > 5" class="card-text text-center  card-text-hot">Últimas unidades</p>
               <p v-if="articulo.stock <= 5" class="card-text text-center ">En stock</p>
@@ -145,7 +142,7 @@
         </div>
       </div> -->
 
-      <div class="container container-sub-farmacia mb-3 mt-3">
+      <div class="container container-sub-farmacia mt-3">
         <div class="content-sub-farmacia">
           <h2 class="text-center">Suscríbete a nuestro boletín</h2>
           <p>Sin promesas de spam, ¡solo nuestras últimas noticias y obsequios!</p>

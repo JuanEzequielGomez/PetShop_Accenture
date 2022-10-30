@@ -707,7 +707,7 @@ nav {
   background-image: url(../img/fondo3.png);
   background-size: 50%;
   width: 20rem;
-  height: 35rem;
+  height: 47rem;
   color: black;
   font-family: 'Rock Salt', cursive;
   box-shadow: 2px 2px 5px rgb(0, 0, 0,0.5);
@@ -726,20 +726,20 @@ nav {
 }
 
 .card-body{
-  height: 40%;
+  height: 45%;
 }
 
 .card-title{
-  height: 15%;
+  height: 13%;
   font-family: 'Bebas Neue', cursive;
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card-text{
   height: 15%;
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: 'Caveat', cursive;
   /* color: #fff;
   text-shadow:
@@ -755,9 +755,9 @@ nav {
 }
 
 .card-text-hot{
-  height: 15%;
+  height: 12%;
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
   font-family: 'Caveat', cursive;
   text-shadow:
@@ -775,7 +775,7 @@ nav {
 .img-card{
   width: 100%;
   height: 60%;
-  object-fit: cover;
+  object-fit: content;
   border-radius: 5rem 5rem 0 0;
   margin-top: 1rem;
 }
@@ -793,18 +793,18 @@ nav {
 } */
 
 .card-price a{
-  background: #02022e !important;
+  background:  #8F584D !important;
   color: #fff;
   text-shadow:
-      0 0 5px rgba(0,178,255,1),
-      0 0 10px rgba(0,178,255,1),
-      0 0 20px rgba(0,178,255,1),
-      0 0 40px rgba(38,104,127,1),
-      0 0 80px rgba(38,104,127,1),
-      0 0 90px rgba(38,104,127,1),
-      0 0 100px rgba(38,104,127,1),
-      0 0 140px rgba(38,104,127,1),
-      0 0 180px rgba(38,104,127,1);
+      0 0 5px #8F584D,
+      0 0 10px #8F584D,
+      0 0 20px #8F584D,
+      0 0 40px #8F584D,
+      0 0 80px #8F584D,
+      0 0 90px #8F584D,
+      0 0 100px #8F584D,
+      0 0 140px #8F584D,
+      0 0 180px #8F584D;
   box-shadow: inset black -1px -1px 3px;
   padding: 1rem;
   font-family: 'Bebas Neue', cursive;
@@ -832,7 +832,7 @@ nav {
 }
 
 .card-price a:hover{
-  background: rgb(22, 22, 188) !important;
+  background: #b14029 !important;
 }
 
 /* .card-price button:hover{
@@ -868,6 +868,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 10px 10px 0px 0px;
 }
 .content-sub h2{
     color: #fff;
@@ -891,14 +892,14 @@ nav {
     padding: 15px 15px;
     font-size: 16px;
     border: none;
-    border-radius: 3px 0px 0px 3px;
+    border-radius: 8px 0px 0px 8px;
     outline: 0px;
 }
 .content-sub form .btn-sub{
     padding: 15px 25px;
     border: none;
     font-size: 16px;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 8px 8px 0px;
     background: #8F584D;
     color: #fff;
     cursor: pointer;
@@ -926,6 +927,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px 10px 0px 0px;
 }
 .content-sub-farmacia h2{
   color: #fff;
@@ -949,14 +951,14 @@ nav {
   padding: 15px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 8px 0px 0px 8px;
   outline: 0px;
 }
 .content-sub-farmacia form .btn-sub{
   padding: 15px 25px;
   border: none;
   font-size: 16px;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 8px 8px 0px;
   background: #8F584D;
   color: #fff;
   cursor: pointer;
@@ -984,6 +986,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px 10px 0px 0px;
 }
 .content-sub-juguetes h2{
   color: #fff;
@@ -1007,14 +1010,14 @@ nav {
   padding: 15px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 8px 0px 0px 8px;
   outline: 0px;
 }
 .content-sub-juguetes form .btn-sub{
   padding: 15px 25px;
   border: none;
   font-size: 16px;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 8px 8px 0px;
   background: #8F584D;
   color: #fff;
   cursor: pointer;
@@ -1042,6 +1045,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px 10px 0px 0px;
 }
 .content-sub-contacto h2{
   color: #fff;
@@ -1065,14 +1069,14 @@ nav {
   padding: 15px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 8px 0px 0px 8px;
   outline: 0px;
 }
 .content-sub-contacto form .btn-sub{
   padding: 15px 25px;
   border: none;
   font-size: 16px;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0px 8px 8px 0px;
   background: #8F584D;
   color: #fff;
   cursor: pointer;
