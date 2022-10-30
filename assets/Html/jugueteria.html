@@ -108,12 +108,11 @@
             <img :src="articulo.imagen" class="card-img-top img-card" alt="...">
             <div class="card-body">
               <h5 class="card-title text-center pt-2">{{articulo.nombre}}</h5>
-              <div class="form-floating">
-                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                  <option selected class="card-desc fs-6 text-ligther">{{articulo.descripcion}}</option>
-                </select>
-                <label for="floatingSelect">Descripción:</label>
-              </div>
+            <details>
+                <summary class="detalle text-center">Detalle del producto:</summary>
+                <p class="descripcion text-center">{{articulo.descripcion}}</p>
+              </details>
+          
               <p v-if="articulo.stock > 5" class="card-text text-center card-text-hot">Últimas unidades</p>
               <p v-if="articulo.stock <= 5" class="card-text text-center ">En stock</p>
               <div class="card-price d-flex align-items-center justify-content-around">

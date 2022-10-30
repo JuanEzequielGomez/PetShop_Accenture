@@ -707,7 +707,7 @@ nav {
   background-image: url(../img/fondo3.png);
   background-size: 50%;
   width: 20rem;
-  height: 47rem;
+  height:fit-content;
   color: black;
   font-family: 'Rock Salt', cursive;
   box-shadow: 2px 2px 5px rgb(0, 0, 0,0.5);
@@ -726,7 +726,7 @@ nav {
 }
 
 .card-body{
-  height: 45%;
+  height: auto;
 }
 
 .card-title{
@@ -807,6 +807,7 @@ nav {
       0 0 180px #8F584D;
   box-shadow: inset black -1px -1px 3px;
   padding: 1rem;
+  margin-bottom: 2rem;
   font-family: 'Bebas Neue', cursive;
 }
 
@@ -1303,4 +1304,10 @@ list-style: none;
   border-radius: 3rem 3rem 3rem 3rem;
 
 }
+details{
+  border-radius: 1rem 1rem 1rem 1rem;
+  background-color: #f3dfd1;
+  font-size: small;
+  transform: scale(1.05);
 
+}
