@@ -70,9 +70,41 @@ createApp({
         deleteCart() {
             this.carrito.length = 0;
             localStorage.setItem('carrito', JSON.stringify(this.carrito));
+        },
+        sendForm() {
+            Swal.fire({
+                title: 'Formulario enviado!',
+                text: 'Gracias por su tiempo.',
+                icon: 'success',
+                confirmButtonText: 'Continue'
+            })
+        },
+        suscriptionForm() {
+            // Swal.fire({
+            //     title: 'Formulario enviado!',
+            //     text: 'Gracias por su tiempo.',
+            //     icon: 'success',
+            //     confirmButtonText: 'Continue'
+            // })
+            Swal.fire({
+                title: '¡Suscripción realizada!',
+                text: '¡Muchas gracias!',
+                width: 800,
+                padding: '3em',
+                color: '#8F584D',
+                background: '#fff url("https://img.freepik.com/vector-gratis/fondo-vida-silvestre-acuarela_23-2149425667.jpg?w=2000")',
+                backdrop: `
+                  rgba(0,0,123,0.4)
+                  url("https://i.pinimg.com/originals/ca/63/06/ca6306b31bc56423fd716406deed3b3d.gif")
+                  left center
+                  no-repeat
+                `
+              })
         }
-    },
 
+        
+    },
+    
     computed: {
         sort() {
             switch(this.filtro) {

@@ -14,7 +14,7 @@
 
 <body>
   <div id="app">
-    <nav class="navbar navbar-expand-lg py-3">
+    <nav class="navbar navbar-expand-lg py-3" id="nav-special">
       <div class="container">
         <a href="#" class="navbar-brand">
           <!-- Logo Image -->
@@ -28,22 +28,59 @@
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse justify-content-end col-xxl-10">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="./farmacia.html" class="nav-link">Farmacia</a></li>
-            <li class="nav-item"><a href="./jugueteria.html" class="nav-link">Juguetes</a>
+            <li class="nav-item active"><a href="/index.html" class="nav-link underline-hover-effect">Home</a></li>
+            <li class="nav-item"><a href="./farmacia.html" class="nav-link underline-hover-effect">Farmacia</a></li>
+            <li class="nav-item"><a href="./jugueteria.html" class="nav-link underline-hover-effect">Juguetes</a>
             </li>
-            <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="./contacto.html" class="nav-link underline-hover-effect">Contacto</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header>
-      <h1>COMPRAS</h1>
-    </header>
+    <main class="container card-details d-flex justify-content-center align-items-center flex-wrap"
+      style="padding: 0.5rem;" id="main-special">
+      <h1 class="m-3 fw-bold text-center mt-5">¡Vea con más detalle su compra!</h1>
+      <!-- <div class="img-detail-container d-flex flex-wrap justify-content-center">
+        <img :src="detalleArt.imagen" class="img-fluid img-detail" :alt="detalleArt.nombre">
+      </div>
+      <div class="card-body-detail d-flex flex-column flex-wrap justify-content-center">
+        <h5 class="card-title-detail">
+          {{detalleArt.nombre}}</h5>
+        <p class="card-text-detail1">{{detalleArt.descripcion}}</p>
+        <p class="card-price-detail">Precio:
+          ${{detalleArt.precio
+          }}</p>
+        <a href="#" class="btn btn-primary" @click="addItem(detalleArt)">Agregar
+          al carrito</a>
+      </div> -->
 
-    <main>
-      <div class="d-flex justify-content-center flex-wrap gap-3 p-3 ">
+      <div class=" card mb-3 card-container1 d-flex justify-content-center" style="max-width:65rem;">
+
+        <div class="row p-3 gap-5 justify-content-center">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img :src="detalleArt.imagen" class="card-img-bottom m-md-3" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="d-flex flex-column">
+                  <h3 class="card-title text-center">{{detalleArt.nombre}}</h3>
+                  <p class="card-text text-center"> {{detalleArt.descripcion}}</p>
+                </div>
+                <div class="d-flex justify-content-evenly">
+                  <div class="card-text text-end fw-bold"> Precio: $ {{detalleArt.precio}}</div>
+                  <div>
+                    <span href="#" class="btn btn-success bottom-0 mb-2 end-0 m-3"
+                      @click="addItem(detalleArt)">Comprar</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="d-flex justify-content-center flex-wrap gap-3 p-3 card-container1">
         <div class="row p-3 gap-5 justify-content-center">
           <div class="card" style="width: 15rem; height:25rem">
             <img :src="detalleArt.imagen" class="card-img-top" alt="...">
@@ -58,8 +95,48 @@
 
         </div>
 
-      </div>
+      </div> -->
     </main>
+
+    <!-- <main class="container card-details d-flex justify-content-center align-items-center flex-wrap"
+      style="padding: 0.5rem;" id="main-special">
+      <div class="card-detail d-flex">
+        <div class="img-detail-container d-flex flex-wrap justify-content-center">
+          <img :src="detalleEvento.image" class="img-detail" :alt="detalleEvento.name">
+        </div>
+        <div class="card-body-detail d-flex flex-column flex-wrap justify-content-center">
+          <h5 class="card-title-detail">
+            {{detalleEvento.name}}</h5>
+          <p class="card-text-detail1">{{detalleEvento.description}}</p>
+          <p class="card-text-detail"> {{fechaActual > detalleEvento.date
+            ? " This event was celebrated at the "
+            : " This event will be celebrated at the "
+            }} {{detalleEvento.place}}.</p>
+          <p class="card-text-detail">Event
+            Date : {{
+            detalleEvento.date
+            }}
+          </p>
+          <p class="card-text-detail">this setting
+            has a
+            capacity for {{
+            detalleEvento.capacity
+            }} people and {{
+            fechaActual > detalleEvento.date
+            ? " we had an attendance of "
+            : " we estimate an attendance of "
+            }} {{assistanceOrEstimate}}. </p>
+          <p class="card-text-detail">{{
+            fechaActual > detalleEvento.date
+            ? " We hope to see you in our next edition of this event!"
+            : " Join us, you are gonna enjoy it!"
+            }}
+          </p>
+          <p class="card-price-detail">Price:
+            ${{detalleEvento.price
+            }}</p>
+        </div>
+    </main> -->
 
     <!-- CARRITO -->
 
@@ -98,8 +175,8 @@
       </div>
     </div>
     <!-- FIN CARRITO -->
-    
-    <footer id="footer-special" class="pb-4 pt-4 text-white">
+
+    <footer id="footer-special2" class="pb-4 pt-4 text-white">
       <!-- <div>
           <ul class="d-flex justify-content-center footer-links">
               <li><a href="#">Home</a></li>
