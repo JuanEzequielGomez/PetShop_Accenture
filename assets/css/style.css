@@ -845,7 +845,7 @@ details{
 
 .img-card{
   width: 100%;
-  max-height: 296px;
+  max-height: 264px !important;
   object-fit: cover;
   border-radius: 5rem 5rem 1rem 1rem;
   margin-top: 1rem;
