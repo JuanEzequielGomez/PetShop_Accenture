@@ -36,8 +36,8 @@
                         <li class="nav-item"><a href="./jugueteria.html"
                                 class="nav-link underline-hover-effect">Juguetes</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link" id="active">Contacto</a></li>
-                        <li class="nav-item"><a href="./acceso.html" class="nav-link underline-hover-effect">Acceso</a>
+                        <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link underline-hover-effect" id="active">Acceso</a>
                         </li>
                     </ul>
                 </div>
@@ -47,90 +47,131 @@
         <main class="container" id="main-special">
             <section class="d-flex p-3 justify-content-center flex-column align-items-center">
 
-                <h1 class="m-3 fw-bold text-center">¡Póngase en contacto!</h1>
+                <h1 class="m-3 fw-bold text-center">¡Bienvenido de nuevo!</h1>
                 <div class="container d-flex justify-content-around align-items-center flex-wrap">
                     <img class="logo-main2" src="../img/logo-contacto.png" alt="">
-                    <p class="logo-main-p fw-bold">
-                        ¿Preguntas? ¿Sugerencias?<br><br>
-                        Para preguntarnos acerca de tu producto o enviarnos tus feedbacks y/o comentarios, simplementa
-                        cumplimenta
-                        el siguiente formulario y el equipo de PELM se pondrá en contacto contigo para tratar tu
-                        consulta.<br><br>
-                        Recuerda que también puedes comunicarte con nosotros por WhatsApp o por teléfono.<br><br>
-                        ¡Muchas gracias!
-                    </p>
                 </div>
             </section>
-            <section class="d-flex p-3 justify-content-around align-items-center fw-bold" id="section-form">
-                <form id="form-contact" @submit.prevent="sendForm" class="m-3">
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Nombre</label>
-                        <input type="text" placeholder="Ingrese su nombre" class="form-control"
-                            id="exampleInputPassword1" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword2" class="form-label">Apellido</label>
-                        <input type="text" placeholder="Ingrese su apellido" class="form-control"
-                            id="exampleInputPassword2">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword3" class="form-label">Teléfono</label>
-                        <input type="text" placeholder="Ingrese su teléfono" class="form-control"
-                            id="exampleInputPassword3">
-                    </div>
-                    <label for="exampleInputText" class="form-label">Email</label>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control input1" placeholder="ejemplo123" id="exampleInputText"
-                            aria-label="Username" required>
-                        <span class="input-group-text">@</span>
-                        <input type="text" class="form-control input2" placeholder="gmail.com" aria-label="Server"
-                            required>
-                    </div>
-                    <p for="exampleInputText2" class="form-label">Mascota</p>
-                    <div class="d-flex flex-row justify-content-evenly">
-                        <div class="d-flex flex-column">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="perro" id="flexCheckDefault1">
-                                <label class="form-check-label mb-2" for="flexCheckDefault1">
-                                    Perro
-                                </label>
+            <div class="d-flex justify-content-around">
+                <section class="d-flex p-3 justify-content-around align-items-center fw-bold" id="section-form">
+                    <form id="form-contact" @submit.prevent="sendForm" class="m-3">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                            <input type="text" placeholder="Ingrese su nombre" class="form-control"
+                                id="exampleInputPassword1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword2" class="form-label">Apellido</label>
+                            <input type="text" placeholder="Ingrese su apellido" class="form-control"
+                                id="exampleInputPassword2">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword3" class="form-label">Teléfono</label>
+                            <input type="text" placeholder="Ingrese su teléfono" class="form-control"
+                                id="exampleInputPassword3">
+                        </div>
+                        <label for="exampleInputText" class="form-label">Email</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control input1" placeholder="ejemplo123"
+                                id="exampleInputText" aria-label="Username" required>
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control input2" placeholder="gmail.com" aria-label="Server"
+                                required>
+                        </div>
+                        <p for="exampleInputText2" class="form-label">Mascota</p>
+                        <div class="d-flex flex-row justify-content-evenly">
+                            <div class="d-flex flex-column">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="perro"
+                                        id="flexCheckDefault1">
+                                    <label class="form-check-label mb-2" for="flexCheckDefault1">
+                                        Perro
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="gato" id="flexCheckDefault2">
+                                    <label class="form-check-label mb-2" for="flexCheckDefault2">
+                                        Gato
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <!-- <label for="exampleInputText3" class="form-label">Otro</label> -->
+                                    <input class="form-check-input" type="checkbox" value="otro" id="flexCheckDefault3">
+                                    <label class="form-check-label mb-2" for="flexCheckDefault3">
+                                        Otro
+                                    </label>
+                                    <input type="text" placeholder="Ingrese otra mascota" class="form-control mb-3"
+                                        id="exampleInputText3">
+                                </div>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="gato" id="flexCheckDefault2">
-                                <label class="form-check-label mb-2" for="flexCheckDefault2">
-                                    Gato
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <!-- <label for="exampleInputText3" class="form-label">Otro</label> -->
-                                <input class="form-check-input" type="checkbox" value="otro" id="flexCheckDefault3">
-                                <label class="form-check-label mb-2" for="flexCheckDefault3">
-                                    Otro
-                                </label>
-                                <input type="text" placeholder="Ingrese otra mascota" class="form-control mb-3"
-                                    id="exampleInputText3">
-                            </div>
+
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                         </div>
 
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required
-                            placeholder="Ingrese comentarios"></textarea>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </div>
+                    </form>
+                </section>
+                <section class="d-flex p-3 justify-content-around align-items-center fw-bold" id="section-form">
+                    <form id="form-contact" @submit.prevent="sendForm" class="m-3">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                            <input type="text" placeholder="Ingrese su nombre" class="form-control"
+                                id="exampleInputPassword1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword2" class="form-label">Apellido</label>
+                            <input type="text" placeholder="Ingrese su apellido" class="form-control"
+                                id="exampleInputPassword2">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword3" class="form-label">Teléfono</label>
+                            <input type="text" placeholder="Ingrese su teléfono" class="form-control"
+                                id="exampleInputPassword3">
+                        </div>
+                        <label for="exampleInputText" class="form-label">Email</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control input1" placeholder="ejemplo123"
+                                id="exampleInputText" aria-label="Username" required>
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control input2" placeholder="gmail.com" aria-label="Server"
+                                required>
+                        </div>
+                        <p for="exampleInputText2" class="form-label">Mascota</p>
+                        <div class="d-flex flex-row justify-content-evenly">
+                            <div class="d-flex flex-column">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="perro"
+                                        id="flexCheckDefault1">
+                                    <label class="form-check-label mb-2" for="flexCheckDefault1">
+                                        Perro
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="gato" id="flexCheckDefault2">
+                                    <label class="form-check-label mb-2" for="flexCheckDefault2">
+                                        Gato
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <!-- <label for="exampleInputText3" class="form-label">Otro</label> -->
+                                    <input class="form-check-input" type="checkbox" value="otro" id="flexCheckDefault3">
+                                    <label class="form-check-label mb-2" for="flexCheckDefault3">
+                                        Otro
+                                    </label>
+                                    <input type="text" placeholder="Ingrese otra mascota" class="form-control mb-3"
+                                        id="exampleInputText3">
+                                </div>
+                            </div>
 
-                </form>
-                <div>
-                    <h2 class="iframe-title mb-5 text-center fw-bold">¡Puede encontrarnos aquí!</h2>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.698031802572!2d-58.4304098!3d-34.6117966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses!2sar!4v1666990903669!5m2!1ses!2sar"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </section>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+
+                    </form>
+                </section>
+            </div>
             <div class="container container-sub-contacto mt-3">
                 <div class="content-sub-contacto">
                     <h2 class="text-center">Suscríbete a nuestro boletín</h2>
