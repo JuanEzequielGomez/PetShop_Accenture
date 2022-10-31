@@ -108,7 +108,9 @@ createApp({
                 title: 'Formulario enviado!',
                 text: 'Gracias por su tiempo.',
                 icon: 'success',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continuar',
+            }).then((result) => {
+                location.reload()
             })
         },
         suscriptionForm() {
