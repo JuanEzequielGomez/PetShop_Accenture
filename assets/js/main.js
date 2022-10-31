@@ -113,6 +113,26 @@ createApp({
                 location.reload()
             })
         },
+        sendFormLogin() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Sección en construcción!',
+                }).then((result) =>{
+                    location.reload()
+            })
+        },
+        sendFormRegistro() {
+            Swal.fire({
+                position: 'center-center',
+                icon: 'success',
+                title: 'Registro realizado con éxito',
+                showConfirmButton: false,
+                timer: 1500
+            }).then((result) =>{
+                location.reload()
+            })
+        },
         suscriptionForm() {
             Swal.fire({
                 title: '¡Suscripción realizada!',
