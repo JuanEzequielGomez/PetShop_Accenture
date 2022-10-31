@@ -108,8 +108,8 @@ createApp({
                 title: 'Formulario enviado!',
                 text: 'Gracias por su tiempo.',
                 icon: 'success',
-                confirmButtonText: 'Continuar',
-            }).then((result) => {
+                confirmButtonText: 'Continúe'
+            }).then((result) =>{
                 location.reload()
             })
         },

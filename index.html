@@ -40,6 +40,8 @@
                         </li>
                         <li class="nav-item"><a href="./assets/html/contacto.html"
                                 class="nav-link underline-hover-effect">Contacto</a></li>
+                        <li class="nav-item"><a href="./assets/html/acceso.html"
+                                class="nav-link underline-hover-effect">Acceso</a></li>
                     </ul>
                 </div>
             </div>
@@ -300,7 +302,7 @@
         <!-- CARRITO -->
 
         <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <img src="../img/carrito.png" alt="icon-cart">
+            <img src="./assets/img/carrito.png" alt="icon-cart">
             <div v-cloak class="counter-cart">{{eduContador()}}</div>
         </div>
 
@@ -316,20 +318,21 @@
                     <div v-if="carrito.length != 0" class="modal-body">
                         <div v-for="product in carrito"
                             class="row d-flex flex-row justify-content-between align-items-center">
-                            <p class="col-5">{{product.nombre}}</p>
-                            <p class="col-3">Price: ${{product.precio}}</p>
-                            <p class="col-2">x {{product.unit}}</p>
-                            <p class="col-1 btn btn-danger text-center" @click="deleteItem(product)">X</p>
+                            <p class="col-5 fw-bold">{{product.nombre}}</p>
+                            <p class="col-3 fw-bold">Precio: ${{product.precio}}</p>
+                            <p class="col-2 fw-bold">x {{product.unit}}</p>
+                            <p class="col-1 btn btn-danger text-center equis" @click="deleteItem(product)">X</p>
                         </div>
-                        <p class="text-center">Total: ${{carrito.reduce((acc, prod) => acc + prod.unit * prod.precio,
+                        <p class="text-center fw-bold">Total: ${{carrito.reduce((acc, prod) => acc + prod.unit *
+                            prod.precio,
                             0)}}</p>
                     </div>
-                    <div v-else class="modal-body text-center">
-                        <p>El carrito esta vacio!!!</p>
+                    <div v-else class="modal-body text-center fw-bold">
+                        <p>¡El carrito está vacio!</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" @click="deleteCart">Vaciar Carrito</button>
-                        <button type="button" class="btn btn-success">Comprar</button>
+                        <button type="button" class="btn btn-danger vaciar" @click="deleteCart">Vaciar Carrito</button>
+                        <button type="button" class="btn btn-success comprar">Comprar</button>
                     </div>
                 </div>
             </div>

@@ -869,7 +869,7 @@ details{
   margin-bottom: 1.5rem;
 }
 
-.card-price a{
+.card-price span{
   background: #8F584D !important;
   color: #fff;
   /* text-shadow:
@@ -916,7 +916,7 @@ details{
   font-family: 'Bebas Neue', cursive;
 }
 
-.card-price a:hover{
+.card-price span:hover{
   background: #FFE5D0 !important;
   color: #8F584D;
   border: #8F584D solid;
@@ -1170,6 +1170,65 @@ details{
   outline: 0px;
 }
 .content-sub-contacto form .btn-sub:hover{
+  background: #FFE5D0;
+  color: #8F584D;
+}
+
+.container-sub-acceso {
+  width: 100%;
+  height: 500px;
+  background: url("../img/ilustracion6.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content-sub-acceso{
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 9, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5rem 5rem 0 0;
+}
+.content-sub-acceso h2{
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.content-sub-acceso p{
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 25px;
+  max-width: 500px;
+  text-align: center;
+}
+.content-sub-acceso form{
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+}
+.content-sub-acceso form .campo{
+  width: 100%;
+  padding: 15px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5rem 0 0 5rem;
+  outline: 0px;
+}
+.content-sub-acceso form .btn-sub{
+  padding: 15px 25px;
+  border: none;
+  font-size: 16px;
+  border-radius: 0 5rem 5rem 0;
+  background: #8F584D;
+  color: #fff;
+  cursor: pointer;
+  outline: 0px;
+}
+.content-sub-acceso form .btn-sub:hover{
   background: #FFE5D0;
   color: #8F584D;
 }
@@ -1502,6 +1561,55 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   transform: scale(1.1);
 }
 
+.vaciar{
+  padding: 15px 25px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5rem;
+  background: #8F584D;
+  color: #fff;
+  cursor: pointer;
+  outline: 0px;
+}
+
+.vaciar:hover{
+  background: #FFE5D0;
+  color: #8F584D;
+}
+
+.equis{
+  padding: 15px 15px;
+  margin-right: 1rem;
+  border: none;
+  font-size: 16px;
+  border-radius: 5rem;
+  background: #8F584D;
+  color: #fff;
+  cursor: pointer;
+  outline: 0px;
+}
+
+.equis:hover{
+  background: #FFE5D0;
+  color: #8F584D;
+}
+
+.comprar{
+  padding: 15px 25px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5rem;
+  background: #FFE5D0;
+  color: #8F584D;
+  cursor: pointer;
+  outline: 0px;
+}
+
+.comprar:hover{
+  background: #8F584D;
+  color: white;
+}
+
 /* ----------------------- WHATSAPP FLOTANTE ----------------------- */
 
 /* #chat{
@@ -1563,7 +1671,8 @@ z-index: 999999;
   padding: 0.5rem;
 } */
 
-/* ----------------------- Mensaje Carrito ----------------------- */
+/* ----------------------- MENSAJE CARRITO ----------------------- */
+
 #mensaje-carrito {
   margin: 0 auto 10px;
 }
