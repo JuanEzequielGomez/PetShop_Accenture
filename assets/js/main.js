@@ -77,6 +77,8 @@ createApp({
                 text: 'Gracias por su tiempo.',
                 icon: 'success',
                 confirmButtonText: 'Continue'
+            }).then((result) =>{
+                location.reload()
             })
         },
         suscriptionForm() {
