@@ -116,8 +116,8 @@ createApp({
         sendFormLogin() {
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
-                text: 'Sección en construcción!',
+                title: 'Ups...',
+                text: '¡Sección en construcción!',
                 }).then((result) =>{
                     location.reload()
             })
