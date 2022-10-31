@@ -769,6 +769,7 @@ details{
 .descripcion{
   padding: 1rem 2rem 1rem 2rem;
   font-size: 1rem;
+  text-align: justify !important;
   font-family: 'Fuzzy Bubbles', cursive;
 }
 
@@ -1145,6 +1146,96 @@ details{
 .content-sub-contacto form .btn-sub:hover{
   background: #FFE5D0;
   color: #8F584D;
+}
+
+/* ----------------------- CONTACTO ----------------------- */
+
+#section-form{
+  background-color: #D4AA8A;
+  background-image: url(../img/fondo2.png);
+  background-size: 40%;
+  border-radius: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+#section-form .form-label{
+  height: 10%;
+  /* margin-top: 2rem; */
+  /* font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive; */
+  background-color: rgba( 143, 88, 77, 0.9 );
+  border-radius: 5rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 40%;
+  padding-left: 1rem;
+}
+
+#section-form input{
+  border-radius: 5rem;
+}
+
+.input1{
+  border-radius: 5rem 0 0 5rem !important;
+}
+
+.input2{
+  border-radius: 0 5rem 5rem 0 !important;
+}
+
+iframe{
+  border:#8F584D solid 0.5rem !important;
+  border-radius: 5rem;
+}
+
+textarea{
+  border-radius: 1rem !important;
+}
+
+.form-check-label{
+  /* height: auto; */
+   /* margin-top: 2rem; */
+  /* font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive; */
+  background-color: rgba( 143, 88, 77, 0.9 );
+  border-radius: 5rem;
+  color: white;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  width: 40%;
+  padding-left: 1.5rem;
+}
+
+#section-form button {
+  padding: 15px 45px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5rem;
+  background: #8F584D;
+  color: #fff;
+  cursor: pointer;
+  outline: 0px;
+}
+#section-form button:hover{
+  background: #FFE5D0;
+  color: #8F584D;
+  border: #8F584D solid;
+}
+
+.iframe-title{
+  height: 10%;
+  /* margin-top: 2rem; */
+  /* font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive; */
+  background-color: rgba( 143, 88, 77, 0.9 );
+  border-radius: 5rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* width: 40%; */
+  padding-left: 1rem;
 }
 
 /* ----------------------- FOOTER ----------------------- */
