@@ -53,19 +53,19 @@
                     <img class="logo-main2 animate__animated animate__backInLeft" src="../img/logo-acceso.png" alt="">
                 </div>
             </section>
-            <div class="d-flex justify-content-around">
+            <div class="d-flex flex-wrap justify-content-around">
                 <section class="d-flex flex-column p-3 justify-content-around align-items-center fw-bold"
                     id="section-form-acceso1">
                     <h2 class="acceso-title text-center fw-bold">Logeo</h2>
-                    <form id="form-acceso" @submit.prevent="sendFormLogin" class="m-3">
+                    <form id="form-acceso" @submit.prevent="sendFormLog" class="m-3">
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Nombre de usuario</label>
                             <input type="text" placeholder="Ingrese su nombre" class="form-control"
                                 id="exampleInputPassword1" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required
+                            <label for="exampleInputPassword2" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword2" required
                                 placeholder="Ingrese su contraseña">
                         </div>
 
@@ -78,19 +78,19 @@
                 <section class="d-flex p-3 flex-column justify-content-around align-items-center fw-bold"
                     id="section-form-acceso2">
                     <h2 class="acceso-title text-center fw-bold">Registro</h2>
-                    <form id="form-acceso" @submit.prevent="sendFormRegistro" class="m-3">
+                    <form id="form-acceso" @submit.prevent="sendFormReg" class="m-3">
 
-                        <label for="exampleInputText" class="form-label">Email</label>
+                        <label for="exampleInputText1" class="form-label">Email</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control input1" placeholder="ejemplo123"
-                                id="exampleInputText" aria-label="Username" required>
+                                id="exampleInputText1" aria-label="Username" required>
                             <span class="input-group-text">@</span>
                             <input type="text" class="form-control input2" placeholder="gmail.com" aria-label="Server"
                                 required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" required
+                            <label for="exampleInputPassword3" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword3" required
                                 placeholder="Ingrese su contraseña">
                         </div>
                         <div class="d-flex justify-content-end">
@@ -153,7 +153,7 @@
         <div>
             <a
                 href="https://api.whatsapp.com/send?phone=+1167313204&text=Hola!%20Te%20estas%20comunicando%20con%20Pet%20Shop%20PELM.%20%C2%BFEn%20qu%C3%A9%20podemos%20ayudarte?"><img
-                    src="../img/chat2.png" alt="fotoChat" id="chat"></a>
+                    src="../img/chat2.png" alt="fotoChat" class="chat"></a>
         </div>
         <footer id="footer-special2" class="pb-4 pt-4 text-white">
             <!-- <div>

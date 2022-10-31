@@ -113,7 +113,7 @@ createApp({
                 location.reload()
             })
         },
-        sendFormLogin() {
+        sendFormLog() {
             Swal.fire({
                 icon: 'error',
                 title: 'Ups...',
@@ -122,7 +122,7 @@ createApp({
                     location.reload()
             })
         },
-        sendFormRegistro() {
+        sendFormReg() {
             Swal.fire({
                 position: 'center-center',
                 icon: 'success',

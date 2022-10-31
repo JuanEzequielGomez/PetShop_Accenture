@@ -159,8 +159,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div v-if="carrito.length != 0" class="modal-body">
-            <div v-for="product in carrito" class="row d-flex flex-row justify-content-between align-items-center" <p
-              class="col-5 fw-bold">{{product.nombre}}</p>
+            <div v-for="product in carrito" class="row d-flex flex-row justify-content-between align-items-center">
+              <p class="col-5 fw-bold">{{product.nombre}}</p>
               <p class="col-3 fw-bold">Precio: ${{product.precio}}</p>
               <p class="col-2 fw-bold">x {{product.unit}}</p>
               <p class="col-1 btn btn-danger text-center equis" @click="deleteItem(product)">X</p>
@@ -183,7 +183,7 @@
     <div>
       <a
         href="https://api.whatsapp.com/send?phone=+1167313204&text=Hola!%20Te%20estas%20comunicando%20con%20Pet%20Shop%20PELM.%20%C2%BFEn%20qu%C3%A9%20podemos%20ayudarte?"><img
-          src="../img/chat2.png" alt="fotoChat" id="chat"></a>
+          src="../img/chat2.png" alt="fotoChat" class="chat"></a>
     </div>
     <footer id="footer-special" class="pb-4 pt-4 text-white">
       <!-- <div>
