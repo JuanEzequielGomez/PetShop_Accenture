@@ -80,12 +80,6 @@ createApp({
             })
         },
         suscriptionForm() {
-            // Swal.fire({
-            //     title: 'Formulario enviado!',
-            //     text: 'Gracias por su tiempo.',
-            //     icon: 'success',
-            //     confirmButtonText: 'Continue'
-            // })
             Swal.fire({
                 title: '¡Suscripción realizada!',
                 text: '¡Muchas gracias!',

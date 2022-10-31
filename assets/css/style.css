@@ -65,10 +65,11 @@ body{
 nav {
     /* height: 5vh; */
     /* background-color: #45526e; */
-    background-color: #8f584d !important; 
+    background-color: rgb(143, 88, 77) !important; 
     font-size: 1.2rem;
     background-image: url(../img/fondo2.png);
     background-size: 20%;
+    /* border-radius: 0 0 4rem 4rem; */
   }
   
   .nav-link {
@@ -130,6 +131,10 @@ nav {
     background-image: url(/assets/img/fondo.png);
     transition: transform 2s ease;
   }
+
+  .carousel-item img{
+    border-radius: 5rem;
+  }
   
   .carousel-slide {
     height: 30vh;
@@ -150,7 +155,7 @@ nav {
 /* ----------------------- CHECKBOXS ----------------------- */
 
 .filtros-ctn{
-  background-color:#D3A989 !important;
+  background-color:rgb(211, 169, 137, 0.6) !important;
 }
 
 #filtro-cards{
@@ -166,6 +171,7 @@ nav {
 #container-filtros{
   background-image: url(../img/fondo3.png);
   background-size: 20%;
+  border-radius: 5rem;
 }
 
 /* ----------------------- PRIMERA SECCIÓN ----------------------- */
@@ -182,9 +188,15 @@ nav {
 
 .logo-main-p{
     text-align: justify;
+    color: black;
     width: 50%;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    /* padding-top: 3rem;
+    padding-bottom: 2rem; */
+    padding: 3rem;
+    background-color: rgb(212, 170, 138, 0.5) !important; 
+    /* background-image: url(../img/fondo2.png); */
+    background-size: 40%;
+    border-radius: 5rem;
 }
 
 .logo-main-p span{
@@ -703,16 +715,16 @@ nav {
 /* ----------------------- PRODUCTOS FARMACIA Y JUGUETERÍA ----------------------- */
 
 .card-container{
-  background-color:rgb(211, 169, 137,0.5) !important;
+  background-color:rgb(211, 169, 137,0.6) !important;
   background-image: url(../img/fondo3.png);
-  background-size: 50%;
+  background-size: 80%;
   width: 20rem;
-  height: 35rem;
+  height: fit-content;
   color: black;
   font-family: 'Rock Salt', cursive;
   box-shadow: 2px 2px 5px rgb(0, 0, 0,0.5);
   /* border-radius: 5rem; */
-  border-radius: 5rem 5rem 0 5rem;
+  border-radius: 5rem 5rem 1rem 5rem;
   /* opacity: 0.9; */
   backdrop-filter: blur(5px);
 }
@@ -721,26 +733,51 @@ nav {
   background-image: url(../img/fondo2.png); */
 
 
-.card-container:hover{
+/* .card-container:hover{
   transform: scale(1.05);
-}
+} */
 
 .card-body{
-  height: 40%;
+  height: auto;
 }
 
 .card-title{
-  height: 15%;
+  /* height: 15%; */
+  min-height: 56px;
   font-family: 'Bebas Neue', cursive;
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+details{
+  /* border-radius: 1rem 1rem 1rem 1rem; */
+  /* background-color: #f3dfd1; */
+  /* font-size: small; */
+  /* transform: scale(1.05); */
+  height: 10%;
+  /* margin-top: 2rem; */
+  font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive;
+  background-color: rgba( 143, 88, 77, 0.6 );
+  border-radius: 5rem;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 80%;
+}
+
+.descripcion{
+  padding: 1rem 2rem 1rem 2rem;
+  font-size: 1rem;
+  font-family: 'Fuzzy Bubbles', cursive;
 }
 
 .card-text{
   height: 15%;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  font-family: 'Caveat', cursive;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive;
+  /* font-family: 'Caveat', cursive; */
   /* color: #fff;
   text-shadow:
       0 0 5px rgba(0,178,255,1),
@@ -752,15 +789,21 @@ nav {
       0 0 100px rgba(38,104,127,1),
       0 0 140px rgba(38,104,127,1),
       0 0 180px rgba(38,104,127,1); */
+  background: rgba( 143, 88, 77, 0.6 );
+  border-radius: 10rem;
+  color: white;
+  padding-top: 0.25rem;
+  width: 80%;
 }
 
 .card-text-hot{
   height: 15%;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  color: #fff;
-  font-family: 'Caveat', cursive;
-  text-shadow:
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive;
+  /* color: #fff; */
+  /* font-family: 'Caveat', cursive; */
+  /* text-shadow:
       0 0 5px rgb(216, 36, 9,1),
       0 0 10px rgba(216, 36, 9,1),
       0 0 20px rgba(216, 36, 9,1),
@@ -769,14 +812,15 @@ nav {
       0 0 90px rgba(216, 36, 9,1),
       0 0 100px rgba(216, 36, 9,1),
       0 0 140px rgba(216, 36, 9,1),
-      0 0 180px rgba(216, 36, 9,1);
+      0 0 180px rgba(216, 36, 9,1); */
+      background: rgba(141, 28, 6, 0.9);
 }
 
 .img-card{
   width: 100%;
-  height: 60%;
+  max-height: 296px;
   object-fit: cover;
-  border-radius: 5rem 5rem 0 0;
+  border-radius: 5rem 5rem 1rem 1rem;
   margin-top: 1rem;
 }
 
@@ -792,10 +836,16 @@ nav {
   object-fit: cover;
 } */
 
+.card-price{
+  gap: 1.4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .card-price a{
-  background: #02022e !important;
+  background: #8F584D !important;
   color: #fff;
-  text-shadow:
+  /* text-shadow:
       0 0 5px rgba(0,178,255,1),
       0 0 10px rgba(0,178,255,1),
       0 0 20px rgba(0,178,255,1),
@@ -805,9 +855,16 @@ nav {
       0 0 100px rgba(38,104,127,1),
       0 0 140px rgba(38,104,127,1),
       0 0 180px rgba(38,104,127,1);
-  box-shadow: inset black -1px -1px 3px;
-  padding: 1rem;
+  box-shadow: inset black -1px -1px 3px; */
+  /* padding: 1rem; */
   font-family: 'Bebas Neue', cursive;
+  padding: 0.5rem 3.5rem;
+  border: none;
+  font-size: 16px;
+  border-radius: 5rem 5rem 5rem 5rem;
+  cursor: pointer;
+  outline: 0px;
+  font-size: 1.2rem;
 }
 
 /* .card-price button{
@@ -828,11 +885,14 @@ nav {
 } */
 
 .card-price div{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .card-price a:hover{
-  background: rgb(22, 22, 188) !important;
+  background: #FFE5D0 !important;
+  color: #8F584D;
+  border: #8F584D solid;
 }
 
 /* .card-price button:hover{
@@ -868,6 +928,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 5rem 5rem 0 0;
 }
 .content-sub h2{
     color: #fff;
@@ -891,14 +952,14 @@ nav {
     padding: 15px 15px;
     font-size: 16px;
     border: none;
-    border-radius: 3px 0px 0px 3px;
+    border-radius: 5rem 0 0 5rem;
     outline: 0px;
 }
 .content-sub form .btn-sub{
     padding: 15px 25px;
     border: none;
     font-size: 16px;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0 5rem 5rem 0;
     background: #8F584D;
     color: #fff;
     cursor: pointer;
@@ -926,6 +987,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 5rem 5rem 0 0;
 }
 .content-sub-farmacia h2{
   color: #fff;
@@ -949,14 +1011,14 @@ nav {
   padding: 15px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 5rem 0 0 5rem;
   outline: 0px;
 }
 .content-sub-farmacia form .btn-sub{
   padding: 15px 25px;
   border: none;
   font-size: 16px;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0 5rem 5rem 0;
   background: #8F584D;
   color: #fff;
   cursor: pointer;
@@ -984,6 +1046,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 5rem 5rem 0 0;
 }
 .content-sub-juguetes h2{
   color: #fff;
@@ -1007,14 +1070,14 @@ nav {
   padding: 15px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 5rem 0 0 5rem;
   outline: 0px;
 }
 .content-sub-juguetes form .btn-sub{
   padding: 15px 25px;
   border: none;
   font-size: 16px;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0 5rem 5rem 0;
   background: #8F584D;
   color: #fff;
   cursor: pointer;
@@ -1042,6 +1105,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 5rem 5rem 0 0;
 }
 .content-sub-contacto h2{
   color: #fff;
@@ -1065,14 +1129,14 @@ nav {
   padding: 15px 15px;
   font-size: 16px;
   border: none;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 5rem 0 0 5rem;
   outline: 0px;
 }
 .content-sub-contacto form .btn-sub{
   padding: 15px 25px;
   border: none;
   font-size: 16px;
-  border-radius: 0px 3px 3px 0px;
+  border-radius: 0 5rem 5rem 0;
   background: #8F584D;
   color: #fff;
   cursor: pointer;
@@ -1086,10 +1150,12 @@ nav {
 /* ----------------------- FOOTER ----------------------- */
 
   footer{
-    background-color: #8F584D !important;
+    background-color: rgb(143, 88, 77, 1) !important;
     font-size: 1.2rem;
     background-image: url(../img/fondo2.png);
     background-size: 20%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur( 20px );
 }
 
 .footer-links{
@@ -1110,6 +1176,15 @@ list-style: none;
     margin-top: auto;
     width: 100%;
   }
+
+/* #footer-text{
+  background: rgba( 255, 255, 255, 0.5 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+} */
 
   /* .bg-lineas-diagonales{
     background: repeating-linear-gradient(
@@ -1224,42 +1299,6 @@ list-style: none;
     padding-top: 2rem;
 } */
 
-/* ----------------------- CARRITO ----------------------- */
-
-.icon-cart {
-  width: 5rem;
-  height: 5rem;
-  background-color: #FFF5ED;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 25px;
-  left: 25px;
-  cursor: pointer;
-  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #8F584D;
-  z-index: 999999;
-}
-
-.icon-cart img {
-  width: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.icon-cart div {
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  background-color: #8F584D;
-  border-radius: 50%;
-  padding: 0.5rem;
-}
-
 /* ----------------------- DETALLES ----------------------- */
 
 /* .card-container1{
@@ -1300,3 +1339,81 @@ list-style: none;
 
 }
 
+/* ----------------------- CARRITO ----------------------- */
+
+.icon-cart {
+  width: 5rem;
+  height: 5rem;
+  background-color: #FFF5ED;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #8F584D;
+  z-index: 999999;
+}
+
+.icon-cart img {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-cart div {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  background-color: #8F584D;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+/* ----------------------- WHATSAPP FLOTANTE ----------------------- */
+
+/* #chat{
+  position:fixed;
+  width: 120px;
+  bottom: 15px;
+  right: 35px;
+} */
+
+#chat {
+  width: 5rem;
+  height: 5rem;
+  background-color: #FFF5ED;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 125px;
+  right: 25px;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #8F584D;
+  z-index: 999999;
+}
+
+/* .icon-cart img {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-cart div {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  background-color: #8F584D;
+  border-radius: 50%;
+  padding: 0.5rem;
+} */
