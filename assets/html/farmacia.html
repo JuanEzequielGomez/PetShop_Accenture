@@ -113,12 +113,12 @@
                 <summary class="detalle text-center">Detalle del producto:</summary>
                 <p class="descripcion text-center">{{articulo.descripcion}}</p>
               </details>
-              <p v-if="articulo.stock > 5" class="card-text text-center  card-text-hot">Últimas unidades</p>
-              <p v-if="articulo.stock <= 5" class="card-text text-center ">En stock</p>
+              <p v-if="articulo.stock < 5" class="card-text text-center  card-text-hot">Últimas unidades</p>
+              <p v-if="articulo.stock >= 5" class="card-text text-center ">En stock</p>
               <div class="card-price d-flex align-items-center justify-content-evenly">
                 <div>$ {{articulo.precio}}</div>
                 <div>
-                  <a :href="'./detalle.html?_id='+articulo._id" class="btn btn-primary">Comprar</a>
+                  <span class="btn btn-primary" @click="addItem(articulo)">Comprar</span>
                 </div>
               </div>
             </div>
@@ -153,16 +153,20 @@
     </main>
 
     <!-- CARRITO -->
+    <!-- CARRITO MENSAJES -->
+    <div :class="[msjCarrito.clases.display, msjCarrito.clases.color]"
+      class="alert alert-success d-flex align-items-center w-25 fixed-bottom text-center " role="alert"
+      id="mensaje-carrito" v-text="msjCarrito.msj"></div>
 
     <div class="icon-cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       <img src="../img/carrito.png" alt="icon-cart">
-      <div v-cloak class="counter-cart">{{carrito.length || 0}}</div>
+      <div v-cloak class="counter-cart">{{eduContador()}}</div>
     </div>
 
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Carrito</h1>
@@ -170,19 +174,21 @@
           </div>
           <div v-if="carrito.length != 0" class="modal-body">
             <div v-for="product in carrito" class="row d-flex flex-row justify-content-between align-items-center">
-              <p class="col-5">{{product.nombre}}</p>
-              <p class="col-5">Price: ${{product.precio}}</p>
-              <p class="col-1">x {{product.unit}}</p>
-              <p class="col-1 btn btn-danger text-center" @click="deleteItem(product)">X</p>
+              <p class="col-5 fw-bold">{{product.nombre}}</p>
+              <p class="col-3 fw-bold">Precio: ${{product.precio}}</p>
+              <p class="col-2 fw-bold">x {{product.unit}}</p>
+              <p class="col-1 btn btn-danger text-center equis" @click="deleteItem(product)">X</p>
             </div>
-            <p class="text-center">Total: ${{carrito.reduce((acc, prod) => acc + prod.unit * prod.precio, 0)}}</p>
+            <p class="text-center fw-bold">Total: ${{carrito.reduce((acc, prod) => acc + prod.unit *
+              prod.precio,
+              0)}}</p>
           </div>
-          <div v-else class="modal-body text-center">
-            <p>El carrito esta vacio!!!</p>
+          <div v-else class="modal-body text-center fw-bold">
+            <p>¡El carrito está vacio!</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" @click="deleteCart">Vaciar Carrito</button>
-            <button type="button" class="btn btn-success">Buy</button>
+            <button type="button" class="btn btn-danger vaciar" @click="deleteCart">Vaciar Carrito</button>
+            <button type="button" class="btn btn-success comprar">Comprar</button>
           </div>
         </div>
       </div>

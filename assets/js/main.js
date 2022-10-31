@@ -10,7 +10,14 @@ createApp({
             detalleArt: [],
             carrito: [],
             filtro: '',
-            busqueda: ''
+            busqueda: '',
+            msjCarrito: {
+                clases: {
+                    display: 'd-none',
+                    color: 'danger'
+                },
+                msj:''
+            }
         }
     },
     created() {
@@ -54,11 +61,33 @@ createApp({
         },
         addItem(event) {
             if(!this.carrito.some(element => element.nombre == event.nombre)){
-                this.carrito.push(event)
-                this.carrito[this.carrito.length - 1].unit = 1
+                this.carrito.push(event);
+                this.carrito[this.carrito.length - 1].unit = 1;
+                this.msjCarrito.clases.display = 'd-flex';
+                this.msjCarrito.clases.color = 'alert-success';
+                this.msjCarrito.msj = 'Se agrego el producto al carrito.';
+                setTimeout(() => {
+                    this.msjCarrito.clases.display = 'd-none';
+                }, 1500);
             } else {
                 this.carrito.map(prod => {
-                    prod.nombre == event.nombre  ? prod.unit += 1 : ''
+                    if(prod.nombre == event.nombre && prod.unit < event.stock){
+                        prod.unit += 1;
+                        this.msjCarrito.clases.display = 'd-flex';
+                        this.msjCarrito.clases.color = 'alert-success';
+                        this.msjCarrito.msj = 'Se ha sumado una unidad al carrito.';
+                        setTimeout(() => {
+                            this.msjCarrito.clases.display = 'd-none';
+                        }, 1500);
+                    } else {
+                        this.msjCarrito.clases.display = 'd-flex';
+                        this.msjCarrito.clases.color = 'alert-danger';
+                        this.msjCarrito.msj = 'No hay mas unidades en stock.';
+                        setTimeout(() => {
+                            this.msjCarrito.clases.display = 'd-none';
+                        }, 1500);
+                    }
+                    //prod.nombre == event.nombre  ? prod.unit += 1 : ''
                 })
             }
             localStorage.setItem('carrito', JSON.stringify(this.carrito));
@@ -71,12 +100,17 @@ createApp({
             this.carrito.length = 0;
             localStorage.setItem('carrito', JSON.stringify(this.carrito));
         },
+        eduContador(){
+            return this.carrito.reduce((acc, prod) => acc + prod.unit, 0);
+        },
         sendForm() {
             Swal.fire({
                 title: 'Formulario enviado!',
                 text: 'Gracias por su tiempo.',
                 icon: 'success',
-                confirmButtonText: 'Continue'
+                confirmButtonText: 'Continúe'
+            }).then((result) =>{
+                location.reload()
             })
         },
         suscriptionForm() {
