@@ -229,6 +229,12 @@ nav {
     padding: 20rem;
 }
 
+@media screen and (max-width: 767px){
+  .logo-main-p {
+    padding: 2.5rem;
+    width: auto;
+  }
+}
 /* ----------------------- SEGUNDA SECCIÓN ----------------------- */
 
 .container__box{
@@ -1404,6 +1410,11 @@ textarea{
   /* border: #8F584D solid; */
 }
 
+@media screen and (max-width: 767px){
+  div iframe {
+    width: 100%;
+  }
+}
 /* ----------------------- FOOTER ----------------------- */
 
   footer{
