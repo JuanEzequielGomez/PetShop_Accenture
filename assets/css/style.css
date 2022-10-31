@@ -123,6 +123,32 @@ nav {
     width: 100%;
   }
 
+/* .logo-pet {
+  animation: waitAnimate_1958287640 3s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes waitAnimate_1958287640 {
+  0% {
+    transform: perspective(100px)rotate(0deg)
+  }
+  16.667% {
+    transform: perspective(100px)rotateX(0deg)rotateY(180deg);
+  }
+  33.333% {
+    transform: perspective(100px)rotateX(0)rotateY(0);
+  }
+  50% {
+    transform: perspective(100px)rotateX(0)rotateY(0);
+  }
+  66.667% {
+    transform: perspective(100px)rotateX(0)rotateY(0);
+  }
+  100% {
+    transform: perspective(100px)rotateX(0)rotateY(0);
+  }
+} */
+
 /* ----------------------- CAROUSEL ----------------------- */
 
   .carousel-item{
@@ -1472,6 +1498,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: white;
 }
 
+.icon-cart:hover{
+  transform: scale(1.1);
+}
+
 /* ----------------------- WHATSAPP FLOTANTE ----------------------- */
 
 /* #chat{
@@ -1506,6 +1536,10 @@ cursor: pointer;
 /* box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #8F584D; */
 z-index: 999999;
 /* padding: 3rem; */
+}
+
+#chat:hover{
+  transform: scale(1.1);
 }
 
 /* .icon-cart img {
