@@ -1240,7 +1240,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   
   .rounded-social-buttons .social-button.facebook {
-    background: #3b5998;
+    background: #D4AA8A;
   }
   
   .rounded-social-buttons .social-button.facebook:hover,
@@ -1251,18 +1251,18 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   
   .rounded-social-buttons .social-button.whatsapp {
-    background: #25d366;
+    background: #D4AA8A;
   }
   
   .rounded-social-buttons .social-button.whatsapp:hover,
   .rounded-social-buttons .social-button.whatsapp:focus {
-    color: #25d366;
+    color: black;
     background: #fefefe;
-    border-color: #25d366;
+    border-color: black;
   }
   
   .rounded-social-buttons .social-button.linkedin {
-    background: #007bb5;
+    background: #D4AA8A;
   }
   
   .rounded-social-buttons .social-button.linkedin:hover,
@@ -1273,7 +1273,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   
   .rounded-social-buttons .social-button.youtube {
-    background: #bb0000;
+    background: #D4AA8A;
   }
   
   .rounded-social-buttons .social-button.youtube:hover,
@@ -1284,7 +1284,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   
   .rounded-social-buttons .social-button.instagram {
-    background: #f09433;
+    background: #D4AA8A;
   }
   
   .rounded-social-buttons .social-button.instagram:hover,
@@ -1292,6 +1292,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #f09433;
     background: #fefefe;
     border-color: #f09433;
+    /* background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 ); */
   }
 
 /* #copyright {
@@ -1373,6 +1378,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   background-color: #8F584D;
   border-radius: 50%;
   padding: 0.5rem;
+  color: white;
 }
 
 /* ----------------------- WHATSAPP FLOTANTE ----------------------- */
@@ -1384,7 +1390,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   right: 35px;
 } */
 
-#chat {
+#chat1 {
   width: 5rem;
   height: 5rem;
   background-color: #FFF5ED;
@@ -1395,6 +1401,20 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   cursor: pointer;
   box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #8F584D;
   z-index: 999999;
+}
+
+#chat {
+  width: 4rem;
+height: auto;
+/* background-color: rgb(255, 245, 237,0.2); */
+/* border-radius: 50%; */
+position: fixed;
+bottom: 125px;
+right: 33px;
+cursor: pointer;
+/* box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px #8F584D; */
+z-index: 999999;
+/* padding: 3rem; */
 }
 
 /* .icon-cart img {
