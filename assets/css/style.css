@@ -919,7 +919,7 @@ details{
 .card-price span:hover{
   background: #FFE5D0 !important;
   color: #8F584D;
-  border: #8F584D solid;
+  /* border: #8F584D solid; */
 }
 
 /* .card-price button:hover{
@@ -1306,7 +1306,7 @@ textarea{
 #section-form button:hover{
   background: #FFE5D0;
   color: #8F584D;
-  border: #8F584D solid;
+  /* border: #8F584D solid; */
 }
 
 .iframe-title{
@@ -1321,6 +1321,87 @@ textarea{
   padding-bottom: 0.5rem;
   /* width: 40%; */
   padding-left: 1rem;
+}
+
+.acceso-title{
+  /* height: 10%; */
+  /* margin-top: 2rem; */
+  /* font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive; */
+  background-color: rgba( 143, 88, 77, 0.9 );
+  border-radius: 5rem;
+  color: white;
+  /* width: 40%; */
+  padding: 1rem;
+}
+
+#section-form-acceso1{
+  background-color: #D4AA8A;
+  background-image: url(../img/fondo2.png);
+  background-size: 80%;
+  border-radius: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  min-width: auto;
+}
+
+#section-form-acceso2{
+  background-color: #D4AA8A;
+  background-image: url(../img/fondo2.png);
+  background-size: 50%;
+  border-radius: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  min-width: 40%;
+}
+
+#section-form-acceso1 .form-label{
+  /* height: 10%; */
+  /* margin-top: 2rem; */
+  /* font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive; */
+  background-color: rgba( 143, 88, 77, 0.9 );
+  border-radius: 5rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* width: 40%; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#section-form-acceso2 .form-label{
+  /* height: 10%; */
+  /* margin-top: 2rem; */
+  /* font-size: 1.2rem;
+  font-family: 'Bebas Neue', cursive; */
+  background-color: rgba( 143, 88, 77, 0.9 );
+  border-radius: 5rem;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 40%;
+  padding-left: 1rem;
+}
+
+#section-form-acceso1 input, #section-form-acceso2 input{
+  border-radius: 5rem;
+}
+
+#section-form-acceso1 button, #section-form-acceso2 button {
+  padding: 15px 45px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5rem;
+  background: #8F584D;
+  color: #fff;
+  cursor: pointer;
+  outline: 0px;
+}
+#section-form-acceso1 button:hover, #section-form-acceso2 button:hover{
+  background: #FFE5D0;
+  color: #8F584D;
+  /* border: #8F584D solid; */
 }
 
 /* ----------------------- FOOTER ----------------------- */

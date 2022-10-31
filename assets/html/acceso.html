@@ -36,8 +36,10 @@
                         <li class="nav-item"><a href="./jugueteria.html"
                                 class="nav-link underline-hover-effect">Juguetes</a>
                         </li>
-                        <li class="nav-item"><a href="./contacto.html" class="nav-link">Contacto</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link underline-hover-effect" id="active">Acceso</a>
+                        <li class="nav-item"><a href="./contacto.html"
+                                class="nav-link underline-hover-effect">Contacto</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link" id="active">Acceso</a>
                         </li>
                     </ul>
                 </div>
@@ -46,89 +48,36 @@
 
         <main class="container" id="main-special">
             <section class="d-flex p-3 justify-content-center flex-column align-items-center">
-
-                <h1 class="m-3 fw-bold text-center">¡Bienvenido de nuevo!</h1>
                 <div class="container d-flex justify-content-around align-items-center flex-wrap">
-                    <img class="logo-main2" src="../img/logo-contacto.png" alt="">
+                    <img class="logo-main2" src="../img/logo-acceso.png" alt="">
                 </div>
             </section>
             <div class="d-flex justify-content-around">
-                <section class="d-flex p-3 justify-content-around align-items-center fw-bold" id="section-form">
-                    <form id="form-contact" @submit.prevent="sendForm" class="m-3">
+                <section class="d-flex flex-column p-3 justify-content-around align-items-center fw-bold"
+                    id="section-form-acceso1">
+                    <h2 class="acceso-title text-center fw-bold">Logeo</h2>
+                    <form id="form-acceso" @submit.prevent="sendForm" class="m-3">
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Nombre</label>
+                            <label for="exampleInputPassword1" class="form-label">Nombre de usuario</label>
                             <input type="text" placeholder="Ingrese su nombre" class="form-control"
                                 id="exampleInputPassword1" required>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword2" class="form-label">Apellido</label>
-                            <input type="text" placeholder="Ingrese su apellido" class="form-control"
-                                id="exampleInputPassword2">
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword3" class="form-label">Teléfono</label>
-                            <input type="text" placeholder="Ingrese su teléfono" class="form-control"
-                                id="exampleInputPassword3">
-                        </div>
-                        <label for="exampleInputText" class="form-label">Email</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control input1" placeholder="ejemplo123"
-                                id="exampleInputText" aria-label="Username" required>
-                            <span class="input-group-text">@</span>
-                            <input type="text" class="form-control input2" placeholder="gmail.com" aria-label="Server"
-                                required>
-                        </div>
-                        <p for="exampleInputText2" class="form-label">Mascota</p>
-                        <div class="d-flex flex-row justify-content-evenly">
-                            <div class="d-flex flex-column">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="perro"
-                                        id="flexCheckDefault1">
-                                    <label class="form-check-label mb-2" for="flexCheckDefault1">
-                                        Perro
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="gato" id="flexCheckDefault2">
-                                    <label class="form-check-label mb-2" for="flexCheckDefault2">
-                                        Gato
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <!-- <label for="exampleInputText3" class="form-label">Otro</label> -->
-                                    <input class="form-check-input" type="checkbox" value="otro" id="flexCheckDefault3">
-                                    <label class="form-check-label mb-2" for="flexCheckDefault3">
-                                        Otro
-                                    </label>
-                                    <input type="text" placeholder="Ingrese otra mascota" class="form-control mb-3"
-                                        id="exampleInputText3">
-                                </div>
-                            </div>
 
-                        </div>
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-primary fw-bold">Enviar</button>
                         </div>
 
                     </form>
                 </section>
-                <section class="d-flex p-3 justify-content-around align-items-center fw-bold" id="section-form">
-                    <form id="form-contact" @submit.prevent="sendForm" class="m-3">
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Nombre</label>
-                            <input type="text" placeholder="Ingrese su nombre" class="form-control"
-                                id="exampleInputPassword1" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword2" class="form-label">Apellido</label>
-                            <input type="text" placeholder="Ingrese su apellido" class="form-control"
-                                id="exampleInputPassword2">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword3" class="form-label">Teléfono</label>
-                            <input type="text" placeholder="Ingrese su teléfono" class="form-control"
-                                id="exampleInputPassword3">
-                        </div>
+                <section class="d-flex p-3 flex-column justify-content-around align-items-center fw-bold"
+                    id="section-form-acceso2">
+                    <h2 class="acceso-title text-center fw-bold">Registro</h2>
+                    <form id="form-acceso" @submit.prevent="sendForm" class="m-3">
+
                         <label for="exampleInputText" class="form-label">Email</label>
                         <div class="input-group mb-3">
                             <input type="text" class="form-control input1" placeholder="ejemplo123"
@@ -137,42 +86,18 @@
                             <input type="text" class="form-control input2" placeholder="gmail.com" aria-label="Server"
                                 required>
                         </div>
-                        <p for="exampleInputText2" class="form-label">Mascota</p>
-                        <div class="d-flex flex-row justify-content-evenly">
-                            <div class="d-flex flex-column">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="perro"
-                                        id="flexCheckDefault1">
-                                    <label class="form-check-label mb-2" for="flexCheckDefault1">
-                                        Perro
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="gato" id="flexCheckDefault2">
-                                    <label class="form-check-label mb-2" for="flexCheckDefault2">
-                                        Gato
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <!-- <label for="exampleInputText3" class="form-label">Otro</label> -->
-                                    <input class="form-check-input" type="checkbox" value="otro" id="flexCheckDefault3">
-                                    <label class="form-check-label mb-2" for="flexCheckDefault3">
-                                        Otro
-                                    </label>
-                                    <input type="text" placeholder="Ingrese otra mascota" class="form-control mb-3"
-                                        id="exampleInputText3">
-                                </div>
-                            </div>
-
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" required>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-primary fw-bold">Enviar</button>
                         </div>
 
                     </form>
                 </section>
             </div>
-            <div class="container container-sub-acceso mt-3">
+            <!-- <div class="container container-sub-acceso mt-3">
                 <div class="content-sub-acceso">
                     <h2 class="text-center">Suscríbete a nuestro boletín</h2>
                     <p>Sin promesas de spam, ¡solo nuestras últimas noticias y obsequios!</p>
@@ -181,7 +106,7 @@
                         <input type="submit" value="Suscribir" class="btn-sub">
                     </form>
                 </div>
-            </div>
+            </div> -->
         </main>
 
         <!-- CARRITO -->
