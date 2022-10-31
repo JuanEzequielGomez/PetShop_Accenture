@@ -1437,3 +1437,8 @@ z-index: 999999;
   border-radius: 50%;
   padding: 0.5rem;
 } */
+
+/* ----------------------- Mensaje Carrito ----------------------- */
+#mensaje-carrito {
+  margin: 0 auto 10px;
+}
