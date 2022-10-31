@@ -48,7 +48,7 @@
             <section class="d-flex p-3 justify-content-center flex-column align-items-center">
 
                 <h1 class="m-3 fw-bold text-center">¡Póngase en contacto!</h1>
-                <div class="container d-flex justify-content-around align-items-center flex-wrap">
+                <div class="container d-flex justify-content-center align-items-center flex-wrap">
                     <img class="logo-main2" src="../img/logo-contacto.png" alt="">
                     <p class="logo-main-p fw-bold">
                         ¿Preguntas? ¿Sugerencias?<br><br>
@@ -61,7 +61,8 @@
                     </p>
                 </div>
             </section>
-            <section class="d-flex p-3 justify-content-around align-items-center fw-bold" id="section-form">
+            <section class="d-flex flex-wrap flex-md-nowrap p-3 justify-content-around align-items-center fw-bold"
+                id="section-form">
                 <form id="form-contact" @submit.prevent="sendForm" class="m-3">
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Nombre</label>
@@ -123,11 +124,11 @@
                     </div>
 
                 </form>
-                <div>
+                <div class="div-iframe d-flex flex-column justify-content-center align-items-center">
                     <h2 class="iframe-title mb-5 text-center fw-bold">¡Puede encontrarnos aquí!</h2>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.698031802572!2d-58.4304098!3d-34.6117966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca429815227f%3A0x5d302e497c2cda87!2sR%C3%ADo%20de%20Janeiro%20300%2C%20C1405CCB%20CABA!5e0!3m2!1ses!2sar!4v1666990903669!5m2!1ses!2sar"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        class="iframe-img" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>

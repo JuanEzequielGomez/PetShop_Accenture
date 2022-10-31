@@ -159,8 +159,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div v-if="carrito.length != 0" class="modal-body">
-            <div v-for="product in carrito" class="row d-flex flex-row justify-content-between align-items-center">
-              <p class="col-5 fw-bold">{{product.nombre}}</p>
+            <div v-for="product in carrito" class="row d-flex flex-row justify-content-between align-items-center" <p
+              class="col-5 fw-bold">{{product.nombre}}</p>
               <p class="col-3 fw-bold">Precio: ${{product.precio}}</p>
               <p class="col-2 fw-bold">x {{product.unit}}</p>
               <p class="col-1 btn btn-danger text-center equis" @click="deleteItem(product)">X</p>
